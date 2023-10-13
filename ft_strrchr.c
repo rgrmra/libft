@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 15:30:30 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/12 17:27:56 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/12 23:38:55 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
-	int	last;
+//	int	last;
 
 	i = ft_strlen(s);
-	last = 0;
-	while (i >= 0)
+//	last = 0;
+	while (i + 1 > 0)
 	{
 		if (*(s + i) == c)
 			return ((char *) &(*(s + i)));

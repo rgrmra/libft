@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 20:47:43 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/12 15:25:09 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/12 23:48:31 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	size;
 	char	*sub;
 
-	if (!s)
-		return (0);
+//	if (!s)
+//		return (0);
 	size = ft_strlen(s);
-	if (start > size)
+	if (start > size || !s || !len)
 		return (ft_strdup(""));
-	if (!size || !len)
+	if (!size) // || !len)
 		return (0);
 	if (size - start < len)
 		len = size - start;
