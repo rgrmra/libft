@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 14:30:54 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/09 15:16:37 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/10 18:17:27 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 	i = 0;
 	j = 0;
 	k = 0;
+	if (!size)
+		return (0);
 	while (*(dst + i) != '\0' && i < size)
 		i++;
 	while (*(src + j) != '\0')

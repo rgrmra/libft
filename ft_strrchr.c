@@ -6,18 +6,26 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 15:30:30 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/07 15:50:56 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/12 17:27:56 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 	int	last;
 
-	i = 0;
+	i = ft_strlen(s);
 	last = 0;
-	while (*(s + i) != 0)
+	while (i >= 0)
+	{
+		if (*(s + i) == c)
+			return ((char *) &(*(s + i)));
+		i--;
+	}
+	/*while (*(s + i) != 0)
 	{
 		if (*(s + i) == c)
 			last = i;
@@ -27,5 +35,6 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	if (*(s + last) == c)
 		return ((char *) &(*(s + last)));
+		*/
 	return (0);
 }

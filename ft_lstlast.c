@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 13:48:45 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/10 19:25:06 by rde-mour         ###   ########.org.br   */
+/*   Created: 2023/10/12 18:20:13 by rde-mour          #+#    #+#             */
+/*   Updated: 2023/10/12 18:23:29 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include "libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
 {
-	while (*s != '\0')
+	if (!lst)
+		return (0);
+	while ((*lst).next != 0)
 	{
-		if (*s == (unsigned char) c)
-			return ((char *) s);
-		s++;
+		lst = (*lst).next;
 	}
-	if (*s == (unsigned char) c)
-		return ((char *) s);
-	return (0);
+	return (lst);
 }

@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:41:54 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/07 18:47:25 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/11 18:38:13 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 #include <stdio.h>
 #include <string.h>
 
-int	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
 	i = 0;
+	if (!dest && !src)
+		return (0);
 	while (i < n)
 	{
 		*(((unsigned char *) dest) + i) = *(((unsigned char *) src) + i);

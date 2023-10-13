@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 13:48:45 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/10 19:25:06 by rde-mour         ###   ########.org.br   */
+/*   Created: 2023/10/12 16:44:09 by rde-mour          #+#    #+#             */
+/*   Updated: 2023/10/12 17:18:26 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include "libft.h"
+
+t_list	*ft_lstnew(void *content)
 {
-	while (*s != '\0')
-	{
-		if (*s == (unsigned char) c)
-			return ((char *) s);
-		s++;
-	}
-	if (*s == (unsigned char) c)
-		return ((char *) s);
-	return (0);
+	t_list	*new;
+
+	new = (t_list *) ft_calloc(1, sizeof(t_list));
+	if (!new)
+		return (0);
+	new -> content = content;
+	new -> next = 0;
+	return (new);
 }

@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 16:06:12 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/07 19:23:24 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/11 21:00:21 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
+	str1 = (unsigned char *) s1;
+	str2 = (unsigned char *) s2;
 	i = 0;
-	while (*(s1 + i) && *(s2 + i) && *(s1 + i) == *(s2 + i) && i < n)
+	while (*(str1 + i) && *(str2 + i) && *(str1 + i) == *(str2 + i) && i < n)
 		i++;
 	if (i != n)
-		return (*(s1 + i) - *(s2 + i));
+		return (*(str1 + i) - *(str2 + i));
 	return (0);
 }

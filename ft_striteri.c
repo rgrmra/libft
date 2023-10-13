@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 13:48:45 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/10 19:25:06 by rde-mour         ###   ########.org.br   */
+/*   Created: 2023/10/12 09:57:08 by rde-mour          #+#    #+#             */
+/*   Updated: 2023/10/12 15:32:06 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	while (*s != '\0')
+	unsigned int	i;
+
+	if (!s)
+		return ;
+	i = 0;
+	while (*(s + i))
 	{
-		if (*s == (unsigned char) c)
-			return ((char *) s);
-		s++;
+		(*f)(i, &s[i]);
+		i++;
 	}
-	if (*s == (unsigned char) c)
-		return ((char *) s);
-	return (0);
 }

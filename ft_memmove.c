@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 19:39:15 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/09 20:26:49 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/10 19:15:38 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,18 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t				i;
-	unsigned char		*ptr;
-	const unsigned char	*ptr1;
 
 	i = 0;
-	ptr = (unsigned char *) dest;
-	ptr1 = (unsigned char *) src;
-	if (!ptr && !ptr1)
+	if (!dest && !src)
 		return (0);
-	if (ptr1 < ptr)
+	if (dest < src)
 	{
-		while (i < n)
-			*(ptr + i++) = *(ptr1)++;
+		ft_memcpy(dest, src, n);
 	}
 	else
 	{
-		i = n;
-		while (i-- > 0)
-			*(ptr + i) = *(ptr1 + i);
+		while (n--)
+			*(((char *) dest) + n) = *(((char *) src) + n);
 	}
 	return (dest);
 }

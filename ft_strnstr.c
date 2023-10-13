@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 19:49:17 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/09 20:29:04 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/11 20:59:20 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	size;
 
 	size = ft_strlen(little);
-	if (size == 0)
+	if (!size || !len)
 		return ((char *) big);
-	if (size > len)
-		size = len;
 	i = 0;
 	j = 0;
-	while (*(big + i) != '\0' && len-- > 0)
+	while (*(big + i) && len--)
 	{
 		if (*(big + i) != *(little + j))
 			j = 0;
@@ -41,10 +39,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 /*
 int	main(void)
 {
-	const char *str = "hello, world!";
-	const char *str1 = "helxo";
+	const char *str = "fake";
+	const char *str1 = NULL;
 
-	printf("%s\n", ft_strnstr(str, str1, 1));
+	printf("%s\n", ft_strnstr(str, str1, 0));
 	return (0);
 }
 */
