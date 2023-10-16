@@ -101,7 +101,7 @@
 
 <br>
 
-- **[ft_lstadd](./doc/ft_lstadd.md)** | **[source code](./ft_lstadd.c)**<br>
+- **[ft_lstadd_back](./doc/ft_lstadd_back.md)** | **[source code](./ft_lstadd_back.c)**<br>
     
 ```c
     void    ft_lstadd_back(t_list **lst, t_list *new);
@@ -109,7 +109,7 @@
 
 <br>
 
-- **[ft_lstadd](./doc/ft_lstadd.md)** | **[source code](./ft_lstadd.c)**<br>
+- **[ft_lstadd_front](./doc/ft_lstadd_front.md)** | **[source code](./ft_lstadd_front.c)**<br>
     
 ```c
     void    ft_lstadd_front(t_list **lst, t_list *new);
