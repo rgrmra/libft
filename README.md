@@ -77,13 +77,4 @@
 <b>FUTURE DIRECTIONS</b>
 
     None
-
-<b>SEE ALSO</b>
-
-    <a href="./doc/ft_atoi">ft_atoi()</a>, <a href="./doc/ft_bzero">ft_bzero()</a>, <a href="./doc/ft_calloc">ft_calloc()</a>, <a href="./doc/ft_isalnum">ft_isalnum()</a>, <a href="./doc/ft_isalpha">ft_isalpha()</a>, <a href="./doc/ft_isascii">ft_isascii()</a>, <a href="./doc/ft_isdigit">ft_isdigit()</a>, <a href="./doc/ft_isprint">ft_isprint()</a>, 
-    <a href="./doc/ft_itoa">ft_itoa()</a>, <a href="./doc/ft_lstadd">ft_lstadd_back()</a>, <a href="./doc/ft_lstadd">ft_lstadd_front()</a>, <a href="./doc/ft_lstclear">ft_lstclear()</a>, <a href="./doc/ft_lstdelone">ft_lstdelone()</a>, <a href="./doc/ft_lstiter">ft_lstiter()</a>, <a href="./doc/ft_lstlast">ft_lstlast</a>, 
-    <a href="./doc/ft_lstmap">ft_lstmap()</a>, <a href="./doc/ft_lstnew">ft_lstnew()</a>, <a href="./doc/ft_lstsize">ft_lstsize()</a>, <a href="./doc/ft_memchr">ft_memchr()</a>, <a href="./doc/ft_memcmp">ft_memcmp()</a>, <a href="./doc/ft_memcpy">ft_memcpy()</a>, <a href="./doc/ft_memmove">ft_memmove()</a>, <a href="./doc/ft_memset">ft_memset()</a>,
-    <a href="./doc/ft_putchar_fd">ft_putchar_fd()</a>, <a href="./doc/ft_putendl_fd">ft_putendl_fd()</a>, <a href="./doc/ft_putnbr">ft_putnbr_fd()</a>, <a href="./doc/ft_putstr">ft_putstr_fd()</a>, <a href="./doc/ft_split">ft_split()</a>, <a href="./doc/ft_strchr">ft_strchr()</a>, <a href="./doc/ft_strdup">ft_strdup()</a>,
-  <a href="./doc/ft_striteri">ft_striteri()</a>, <a href="./doc/ft_strljoin">ft_strjoin()</a>, <a href="./doc/ft_strlcat">ft_strlcat()</a>, <a href="./doc/ft_strlcpy">ft_strlcpy()</a>, <a href="./doc/ft_strlen">ft_strlen()</a>, <a href="./doc/ft_strmapi">ft_strmapi()</a>, <a href="./doc/ft_strncmp">ft_strncmp()</a>,
-  <a href="./doc/ft_strrchr">ft_strrchr()</a>, <a href="./doc/ft_strtrim">ft_strtrim()</a>, <a href="./doc/ft_substr">ft_substr()</a>, <a href="./doc/ft_tolower">ft_tolower()</a>, <a href="./doc/ft_toupper">ft_toupper()</a>
 </pre>
