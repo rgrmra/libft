@@ -1,38 +1,41 @@
 #   ft_isalpha.c
 
-<pre>
-<b>NAME</b>
 
-    ft_isalpha - character classification function
+### NAME
 
-<b>LIBRARY</b>
+- ft_isalpha - character classification function
 
-    forty-two standard library (libft.h)
+### LIBRARY
 
-<b>SYNOPSIS</b>
+- forty-two standard library (_libft.h_)
 
+### SYNOPSIS
+
+```c
     #include "libft.h"
 
     int     ft_isalpha(int c);
+```
 
-<b>DESCRIPTION</b>
+### DESCRIPTION
 
-    This functions check wheter <i>c</i>, which must have the value of an <i>unsigned char</i>.
+-    This functions check wheter `c`, which must have the value of an `unsigned char`.
 
-    <b>isalpha()</b>
-        checks for an alphabetic character; in the standard "C" locale. In some locales, there may be additional characters for which <b>isalpha</b>() is true-letters which are neither uppercase nor lowercase.
+- **isalpha()**<br>
+    checks for an alphabetic character; in the standard _C_ locale. In some locales, there may be additional characters for which `isalpha()` is true-letters which are neither uppercase nor lowercase.
 
-<b>RETURN VALUE</b>
+### RETURN VALUE
 
-    The value returned is nonzero if the character c falls into the tested class, and zero if not.
+- The value returned is nonzero if the character `c` falls into the tested class, and zero if not.
 
-<b>NOTES</b>
+### NOTES
 
-    The standards requite that the argument c for this function is representable in the type <i>unsigned char</i>. If the argument c is of type char, it must be cast to <i>unsigned char</i>, as in the following example:
+- The standards requite that the argument _c_ for this function is representable in the type `unsigned char`. If the argument _c_ is of type `char`, it must be cast to `unsigned char`, as in the following example:
 
+```c
     char    c;
 
     res = ft_isalpha((unsigned char) c);
+```
 
-    This is necessary because char may be the equivalente of signed char, in which case a byte where the top bit is set would be sign extended when converting to int, yielding a value that is outside the range of unsigned char.
-
+-    This is necessary because char may be the equivalente of `signed char`, in which case a byte where the top bit is set would be sign extended when converting to `int`, yielding a value that is outside the range of `unsigned char`.
