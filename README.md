@@ -1,80 +1,376 @@
 #  libft.h
-<pre style="overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;">
-<b>NAME</b>
 
-    libft.h - forty-two standard library
+### NAME
 
-<b>SYNOPSIS</b>
+- libft.h - forty-two standard library
 
+### SYNOPSIS
+
+```c
     #include "libft.h"
+```
 
-<b>DESCRIPTION</b>
+### DESCRIPTION
 
-    The <b>"libft.h"</b> headers defines the folowing:
+#### The **"libft.h"** headers defines the folowing:
 
-    <b>size_t</b>
-        Unsigned integral type of the result of the sizeof operator. As described in <i>&#60;stddef.h&#62;</i>.
+- **size_t**<br>
+  Unsigned integral type of the result of the sizeof operator. As described in _<stddef.h>_.
 
-    <b>list_t</b>
-        Linked list structure that provides the folowing filds:
+- **[list_t](./doc/list_t.md)** | **[source code](libft.h)**<br>
+    Linked list structure that provides the folowing filds:
 
-    void         *<a href="./doc/list_t.md">content;</a>
-    struct s_list <a href="./doc/list_t.md">next;</a>
+```c
+    void            *content;
+    struct s_list    next;
+```
 
+<br>
 
-    The following functions are declared as functions and may also be defined as macros.
+#### The following functions are declared as functions:
 
-    int		  <a href="./doc/ft_atoi.md">ft_atoi</a>(const char *nptr);
-    void	  <a href="./doc/ft_bzero.md">ft_bzero</a>(void *s, size_t n);
-    void	 *<a href="./doc/ft_calloc.md">ft_calloc</a>(size_t nmemb, size_t size);
-    int		  <a href="./doc/ft_isalnum.md">ft_isalnum</a>(int i);
-    int		  <a href="./doc/ft_isalpha.md">ft_isalpha</a>(int i);
-    int		  <a href="./doc/ft_isascii.md">ft_isascii</a>(int i);
-    int		  <a href="./doc/ft_isdigit.md">ft_isdigit</a>(int i);
-    int		  <a href="./doc/ft_isprint.md">ft_isprint</a>(int i);
-    char	 *<a href="./doc/ft_itoa.md">ft_itoa</a>(int i);
-    void	  <a href="./doc/ft_lstadd.md">ft_lstadd_back</a>(t_list **lst, t_list *new);
-    void	  <a href="./doc/ft_lstadd.md">ft_lstadd_front</a>(t_list **lst, t_list *new);
-    void	  <a href="./doc/ft_lstclear.md">ft_lstclear</a>(t_list **lst, void (*del)(void *));
-    void	  <a href="./doc/ft_lstdelone.md">ft_lstdelone</a>(t_list *lst, void (*del)(void *));
-    void	  <a href="./doc/ft_lstiter.md">ft_lstiter</a>(t_list *lst, void (*f)(void *));
-    t_list	 *<a href="./doc/ft_lstlast.md">ft_lstlast</a>(t_list *lst);
-    t_list	 *<a href="./doc/ft_lstmap.md">ft_lstmap</a>(t_list *lst, void *(*f)(void *), void (*del)(void *));
-    t_list	 *<a href="./doc/ft_lstnew.md">ft_lstnew</a>(void *content);
-    int		  <a href="./doc/ft_lstsize.md">ft_lstsize</a>(t_list *lst);
-    void	 *<a href="./doc/ft_memchr.md">ft_memchr</a>(const void *s, int c, size_t n);
-    int		  <a href="./doc/ft_memcmp.md">ft_memcmp</a>(const void *s1, const void *s2, size_t n);
-    void	 *<a href="./doc/ft_memcpy.md">ft_memcpy</a>(void *dest, const void *src, size_t	n);
-    void	 *<a href="./doc/ft_memmove.md">ft_memmove</a>(void *dest, const void *src, size_t	n);
-    void	 *<a href="./doc/ft_memset.md">ft_memset</a>(void *s, int c, size_t n);
-    void	  <a href="./doc/ft_putchar_fd.md">ft_putchar_fd</a>(char c, int fd);
-    void	  <a href="./doc/ft_putendl_fd.md">ft_putendl_fd</a>(char *s, int fd);
-    void	  <a href="./doc/ft_putnbr.md">ft_putnbr_fd</a>(int n, int fd);
-    void	  <a href="./doc/ft_putstr.md">ft_putstr_fd</a>(char *s, int fd);
-    char	**<a href="./doc/ft_split.md">ft_split</a>(const char *s, char c);
-    char	 *<a href="./doc/ft_strchr.md">ft_strchr</a>(const char *s, int c);
-    char	 *<a href="./doc/ft_strdup.md">ft_strdup</a>(const char *s);
-    void	  <a href="./doc/ft_striteri.md">ft_striteri</a>(char *s, void (*f)(unsigned int, char *));
-    char	 *<a href="./doc/ft_strljoin.md">ft_strjoin</a>(const char *s1, const char *s2);
-    size_t	  <a href="./doc/ft_strlcat.md">ft_strlcat</a>(char *dest, char *src, size_t size);
-    size_t	  <a href="./doc/ft_strlcpy.md">ft_strlcpy</a>(char *dest, char *src, size_t size);
-    size_t	  <a href="./doc/ft_strlen.md">ft_strlen</a>(const char *s);
-    char	 *<a href="./doc/ft_strmapi.md">ft_strmapi</a>(const char *s, char (*f)(unsigned int, char));
-    int		  <a href="./doc/ft_strncmp.md">ft_strncmp</a>(const char *s1, const char *s2, size_t n);
-    char	 *<a href="./doc/ft_strrchr.md">ft_strrchr</a>(const char *s, int c);
-    char	 *<a href="./doc/ft_strtrim.md">ft_strtrim</a>(const char *s1, const char *set);
-    char	 *<a href="./doc/ft_substr.md">ft_substr</a>(const char *s, unsigned int start, size_t len);
-    int		  <a href="./doc/ft_tolower.md">ft_tolower</a>(int i);
-    int		  <a href="./doc/ft_toupper.md">ft_toupper</a>(int i);
+-  **[ft_atoi](./doc/ft_atoi.md)** | **[source code](./ft_atoi.c)**<br>
+    Converts a string containing numeric characters to integer.
+```c
+    int    ft_atoi(const char *nptr);
+```
 
+<br>
 
-    Inclusion of <i>"libft.h"</i> header may also make visible all symbols from <i>&#60;stddef.h&#62;</i> and <i>&#60;stdlib.h&#62;</i>.
+- **[ft_bzero](./doc/ft_bzero.md)** | **[source code](./ft_bzero.c)**<br>
+    Defines all bytes required with zero.
+```c
+    void    ft_bzero(void *s, size_t n);
+```
 
-<b>APPLICATION USAGE</b>
+<br>
 
-    None
+- **[ft_calloc](./doc/ft_calloc.md)** | **[source code](./ft_calloc.c)**<br>
+    Alloc the required space of memory and sets all bytes to zero.
+```c
+    void    *ft_calloc(size_t nmemb, size_t size);
+```
 
-<b>FUTURE DIRECTIONS</b>
+<br>
 
-    None
-</pre>
+-    **[ft_isalnum](./doc/ft_isalnum.md)** | **[source code](./ft_isalnum.c)**<br>
+    Checks for an alphanumeric character.
+```c
+    int    ft_isalnum(int i);
+```
+
+<br>
+
+- **[ft_isalpha](./doc/ft_isalpha.md)** | **[source code](./ft_isalpha.c)**<br>
+    Checks for an alphabetic character.
+```c
+    int    ft_isalpha(int i);
+```
+
+<br>
+
+- **[ft_isascii](./doc/ft_isascii.md)** | **[source code](./ft_isascii.c)**<br>
+    Checks whether character is a 7-bit US-ASCII character code.
+```c
+    int    ft_isascii(int i);
+```
+
+<br>
+
+- **[ft_isdigit](./doc/ft_isdigit.md)** | **[source code](./ft_isdigit.c)**<br>
+    checks for a digit (0 through 9).
+```c
+    int    ft_isdigit(int i);
+```
+
+<br>
+
+- **[ft_isprint](./doc/ft_isprint.md)** | **[source code](./ft_isprint.c)**<br>
+    checks for any printable character including space.
+```c
+    int    ft_isprint(int i);
+```
+
+<br>
+
+- **[ft_itoa](./doc/ft_itoa.md)** | **[source code](./ft_itoa.c)**<br>
+    
+```c
+    char    *ft_itoa(int i);
+```
+
+<br>
+
+- **[ft_lstadd](./doc/ft_lstadd.md)** | **[source code](./ft_lstadd.c)**<br>
+    
+```c
+    void    ft_lstadd_back(t_list **lst, t_list *new);
+```
+
+<br>
+
+- **[ft_lstadd](./doc/ft_lstadd.md)** | **[source code](./ft_lstadd.c)**<br>
+    
+```c
+    void    ft_lstadd_front(t_list **lst, t_list *new);
+```
+
+<br>
+
+- **[ft_lstclear](./doc/ft_lstclear.md)** | **[source code](./ft_lstclear.c)**<br>
+    
+```c
+    void    ft_lstclear(t_list **lst, void (*del)(void *));
+```
+
+<br>
+
+- **[ft_lstdelone](./doc/ft_lstdelone.md)** | **[source code](./ft_lstdelone.c)**<br>
+    
+```c
+    void    ft_lstdelone(t_list *lst, void (*del)(void *));
+```
+
+<br>
+
+- **[ft_lstiter](./doc/ft_lstiter.md)** | **[source code](./ft_lstiter.c)**<br>
+    
+```c
+    void    ft_lstiter(t_list *lst, void (*f)(void *));
+```
+
+<br>
+
+- **[ft_lstlast](./doc/ft_lstlast.md)** | **[source code](./ft_lstlast.c)**<br>
+    
+```c
+    t_list    ft_lstlast(t_list *lst);
+```
+
+<br>
+
+- **[ft_lstmap](./doc/ft_lstmap.md)** | **[source code](./ft_lstmap.c)**<br>
+    
+```c
+    t_list    ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+```
+
+<br>
+
+- **[ft_lstnew](./doc/ft_lstnew.md)** | **[source code](./ft_lstnew.c)**<br>
+    
+```c
+    t_list    *ft_lstnew(void *content);
+```
+
+<br>
+
+- **[ft_lstsize](./doc/ft_lstsize.md)** | **[source code](./ft_lstsize.c)**<br>
+    
+```c
+    int    ft_lstsize(t_list *lst);
+```
+
+<br>
+
+- **[ft_memchr](./doc/ft_memchr.md)** | **[source code](./ft_memchr.c)**<br>
+    
+```c
+    void    *ft_memchr(const void *s, int c, size_t n);
+```
+
+<br>
+
+- **[ft_memcmp](./doc/ft_memcmp.md)** | **[source code](./ft_memcmp.c)**<br>
+    
+```c
+    int    ft_memcmp(const void *s1, const void *s2, size_t n);
+```
+
+<br>
+
+- **[ft_memcpy](./doc/ft_memcpy.md)** | **[source code](./ft_memcpy.c)**<br>
+    
+```c
+    void    *ft_memcpy(void *dest, const void *src, size_t n);
+```
+
+<br>
+
+- **[ft_memmove](./doc/ft_memmove.md)** | **[source code](./ft_memmove.c)**<br>
+    
+```c
+    void    *ft_memmove(void *dest, const void *src, size_t	n);
+```
+
+<br>
+
+- **[ft_memset](./doc/ft_memset.md)** | **[source code](./ft_memset.c)**<br>
+    
+```c
+    void    *ft_memset(void *s, int c, size_t n);
+```
+
+<br>
+
+- **[ft_putchar_fd](./doc/ft_putchar_fd.md)** | **[source code](./ft_putchar_fd.c)**<br>
+    
+```c
+    void    ft_putchar_fd(char c, int fd);
+```
+
+<br>
+
+- **[ft_putendl_fd](./doc/ft_putendl_fd.md)** | **[source code](./ft_putendl_fd.c)**<br>
+    
+```c
+    void    ft_putendl_fd(char *s, int fd);
+```
+
+<br>
+
+- **[ft_putnbr_fd](./doc/ft_putnbr_fd.md)** | **[source code](./ft_putnbr_fd.c)**<br>
+    
+```c
+    void    ft_putnbr_fd(int n, int fd);
+```
+
+<br>
+
+- **[ft_putstr_fd](./doc/ft_putstr_fd.md)** | **[source code](./ft_putstr_fd.c)**<br>
+    
+```c
+    void    ft_putstr_fd(char *s, int fd);
+```
+
+<br>
+
+- **[ft_split](./doc/ft_split.md)** | **[source code](./ft_split.c)**<br>
+    
+```c
+    char    **ft_split(const char *s, char c);
+```
+
+<br>
+
+- **[ft_strchr](./doc/ft_strchr.md)** | **[source code](./ft_strchr.c)**<br>
+    
+```c
+    char    *ft_strchr(const char *s, int c);
+```
+
+<br>
+
+- **[ft_strdup](./doc/ft_strdup.md)** | **[source code](./ft_strdup.c)**<br>
+    
+```c
+    char    *ft_strdup(const char *s);
+```
+
+<br>
+
+- **[ft_striteri](./doc/ft_striteri.md)** | **[source code](./ft_striteri.c)**<br>
+    
+```c
+    void    ft_striteri(char *s, void (*f)(unsigned int, char *));
+```
+
+<br>
+
+- **[ft_strljoin](./doc/ft_strljoin.md)** | **[source code](./ft_strljoin.c)**<br>
+    
+```c
+    char    *ft_strjoin(const char *s1, const char *s2);
+```
+
+<br>
+
+- **[ft_strlcat](./doc/ft_strlcat.md)** | **[source code](./ft_strlcat.c)**<br>
+    
+```c
+    size_t    ft_strlcat(char *dest, char *src, size_t size);
+```
+
+<br>
+
+- **[ft_strlcpy](./doc/ft_strlcpy.md)** | **[source code](./ft_strlcpy.c)**<br>
+    
+```c
+    size_t    ft_strlcpy(char *dest, char *src, size_t size);
+```
+
+<br>
+
+- **[ft_strlen](./doc/ft_strlen.md)** | **[source code](./ft_strlen.c)**<br>
+    
+```c
+    size_t    ft_strlen(const char *s);
+```
+
+<br>
+
+- **[ft_strmapi](./doc/ft_strmapi.md)** | **[source code](./ft_strmapi.c)**<br>
+    
+```c
+    char    *ft_strmapi(const char *s, char (*f)(unsigned int, char));
+```
+
+<br>
+
+- **[ft_strncmp](./doc/ft_strncmp.md)** | **[source code](./ft_strncmp.c)**<br>
+    
+```c
+    int    ft_strncmp(const char *s1, const char *s2, size_t n);
+```
+
+<br>
+
+- **[ft_strrchr](./doc/ft_strrchr.md)** | **[source code](./ft_strrchr.c)**<br>
+    
+```c
+    char    *ft_strrchr(const char *s, int c);
+```
+
+<br>
+
+- **[ft_strtrim](./doc/ft_strtrim.md)** | **[source code](./ft_strtrim.c)**<br>
+    
+```c
+    char    *ft_strtrim(const char *s1, const char *set);
+```
+
+<br>
+
+- **[ft_substr](./doc/ft_substr.md)** | **[source code](./ft_substr.c)**<br>
+    
+```c
+    char    *ft_substr(const char *s, unsigned int start, size_t len);
+```
+
+<br>
+
+- **[ft_tolower](./doc/ft_tolower.md)** | **[source code](./ft_tolower.c)**<br>
+    
+```c
+    int    ft_tolower(int i);
+```
+
+<br>
+
+- **[ft_toupper](./doc/ft_toupper.md)** | **[source code](./ft_toupper.c)**<br>
+    
+```c
+    int    ft_toupper(int i);
+```
+
+<br>
+
+- Inclusion of _"libft.h"_ header may also make visible all symbols from _<stddef.h>_ and _<stdlib.h>_.
+
+### APPLICATION USAGE
+
+- None
+
+### FUTURE DIRECTIONS
+
+- None
