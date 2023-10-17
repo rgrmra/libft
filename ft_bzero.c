@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 12:39:22 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/07 12:54:45 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/14 13:42:27 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-		*(((unsigned char *) s) + i++) = '\0';
+	ft_memset(s, 0, n);
 }

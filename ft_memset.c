@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 19:45:41 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/10 17:47:29 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/15 14:22:36 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,10 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
+	unsigned char	*ptr;
 
-	i = 0;
-	while (i < n)
-		*(((unsigned char *) s) + i++) = c;
+	ptr = (unsigned char *) s;
+	while (n--)
+		*ptr++ = c;
 	return (s);
 }
-/*
-int	main(void)
-{
-	int c = 'm';
-	void	*t[10];
-
-	ft_memset(t, c, 10);
-
-	c = 'r';
-	int i = 0;
-	while (i < 10)
-		printf("%c\n", *(((unsigned char *) t) + i++));
-	return (0);
-}
-*/

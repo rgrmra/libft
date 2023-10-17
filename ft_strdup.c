@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 18:24:19 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/09 18:43:13 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/14 13:45:31 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,14 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t	i;
-	size_t	size;
+	size_t	len;
 	char	*dup;
 
-	size = ft_strlen(s);
-	dup = (char *) malloc((size + 1) * sizeof(char));
+	len = ft_strlen(s);
+	dup = (char *) ft_calloc(len + 1, sizeof(char));
 	if (!dup)
 		return (0);
-	i = 0;
-	while (i < size)
-		*(dup + i++) = *(s)++;
-	*(dup + i) = '\0';
+	ft_memcpy((void *) dup, s, len);
+	*(dup + len) = '\0';
 	return (dup);
 }
-/*
-int	main(void)
-{
-	char *str = "teste";
-
-	char *dest1 = ft_strdup(str);
-	char *dest = ft_strdup(str);
-
-	printf("%p %s \n%p %s\n", str, str, dest, dest);
-	printf("\n%p %s \n%p %s\n", str, str, dest1, dest1);
-
-	free(dest1);
-	free(dest);
-
-	return (0);
-}
-*/

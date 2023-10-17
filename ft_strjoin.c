@@ -6,13 +6,11 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 21:17:55 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/12 15:28:26 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/14 13:57:41 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

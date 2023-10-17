@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 18:53:43 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/12 19:45:00 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/14 13:46:39 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *head;
-	t_list *next;
+	t_list	*head;
+	t_list	*next;
 
 	if (!lst || !del)
 		return ;

@@ -6,12 +6,11 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 21:03:57 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/12 09:36:32 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/14 13:59:45 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	count_digits(long nbr)
 {
@@ -47,29 +46,19 @@ char	*ft_itoa(int n)
 
 	nbr = (long) n;
 	sign = check_sign(&nbr);
-	size = count_digits(nbr);
-	new = (char *) ft_calloc(sign + size + 1, sizeof(char));
+	size = count_digits(nbr) + 1;
+	new = (char *) ft_calloc(sign + size, sizeof(char));
 	if (!new)
 		return (0);
 	if (nbr == 0)
 		*(new) = '0';
-	*(new + sign + size + 1) = '\0';
+	*(new + sign + --size) = '\0';
 	while (nbr > 0)
 	{
-		*(new + --size + sign) = nbr % 10 + 48;
+		*(new + --size + sign) = (nbr % 10) + 48;
 		nbr /= 10;
 	}
 	if (sign)
 		*(new) = '-';
 	return (new);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(2147483647));
-	printf("%s\n", ft_itoa(10));
-	printf("%s\n", ft_itoa(-2147483648));
-	return (0);
-}
-*/

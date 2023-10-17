@@ -6,13 +6,11 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:04:22 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/12 15:58:03 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/14 13:49:36 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include <stdio.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -24,26 +22,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (!nmemb || !size || nmemb == total_size / size)
 		alloc = (void *) malloc(total_size);
 	if (alloc)
-		ft_bzero(alloc, size * nmemb);
+		ft_bzero(alloc, total_size);
 	return (alloc);
 }
-/*
-int	main(void)
-{
-	int	size = 2;
-	int	type = 2;
-
-	void *t = calloc(size, type);
-	void *y = ft_calloc(size, type);
-
-	int i = 0;
-	while (i < size * type + 3)
-	{
-		printf("%d: T: %p %c | Y: %p %c\n", i, &t[i], *(((unsigned char *) t) + i),
-				&y[i], *(((unsigned char *) y) + i));
-		i++;
-	}
-	free(t);
-	free(y);
-}
-*/

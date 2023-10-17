@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:47:21 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/05 19:49:41 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/15 14:22:59 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	unsigned long	i;
+	const char	*str;
 
-	i = 0;
-	while (*(s + i) != '\0')
-		i++;
-	return (i);
+	str = s;
+	while (*str)
+		++str;
+	return (str - s);
 }

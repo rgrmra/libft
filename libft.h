@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 19:00:04 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/12 19:51:21 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/14 16:58:49 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,11 @@ char	**ft_split(const char *s, char c);
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *s, int c);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-size_t	ft_strlcat(char *dest, char *src, size_t size);
-size_t	ft_strlcpy(char *dest, char *src, size_t size);
+size_t	ft_strlcat(char *dest, const char *src, size_t size);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 size_t	ft_strlen(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strrchr(const char *s, int c);

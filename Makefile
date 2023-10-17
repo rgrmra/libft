@@ -6,7 +6,7 @@
 #    By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 10:01:10 by rde-mour          #+#    #+#              #
-#    Updated: 2023/10/12 19:50:27 by rde-mour         ###   ########.org.br    #
+#    Updated: 2023/10/14 14:35:11 by rde-mour         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,7 @@ $(NAME): $(OBJS)
 	@ar rc -s $(NAME) $(OBJS)
 
 %.o: %.c
-	@echo "Compiling: $@"
+	@echo "Compiling: $<"
 	@$(CC) $(FLAGS) -c $< -o $@ -I$(HEADER)
 
 bonus:

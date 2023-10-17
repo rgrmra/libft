@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:56:49 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/12 15:29:30 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/14 13:51:06 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new = ft_substr(s1, 0, ++size);
 	return (new);
 }
-/*
-int	main(void)
-{
-	const char *str = "  \t \t \n   \n\n\n\t";
-
-	printf("%s\n", ft_strtrim(str, "\n\t "));
-	return (0);
-}
-*/
