@@ -23,7 +23,7 @@
 - The argument is an `int` which must have the value of an `unsigned char`.
 
 - **ft_isalpha()**<br>
-    checks for an alphabetic character; in the standard _C_ locale. In some locales, there may be additional characters for which `isalpha()` is true-letters which are neither uppercase nor lowercase.
+    checks for an alphabetic character; in the standard _C_ locale. In some locales, there may be additional characters for which `ft_isalpha()` is true-letters which are neither uppercase nor lowercase.
 
 ### RETURN VALUE
 
