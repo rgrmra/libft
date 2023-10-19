@@ -19,7 +19,9 @@
 
 ### DESCRIPTION
 
--    This functions check wheter `c`, which must have the value of an `unsigned char`.
+- This functions check wheter `c` is a character of class alpha in the current locale.
+
+- The argument is an `int` which must have the value of an `unsigned char`.
 
 - **isalpha()**<br>
     checks for an alphabetic character; in the standard _C_ locale. In some locales, there may be additional characters for which `isalpha()` is true-letters which are neither uppercase nor lowercase.
@@ -30,7 +32,7 @@
 
 ### NOTES
 
-- The standards requite that the argument _c_ for this function is representable in the type `unsigned char`. If the argument _c_ is of type `char`, it must be cast to `unsigned char`, as in the following example:
+- The standards require that the argument `c` for this function is representable in the type `unsigned char`. If the argument `c` is of type `char`, it must be cast to `unsigned char`, as in the following example:
 
 ```c
     char    c;
