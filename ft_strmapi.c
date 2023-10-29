@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 09:37:20 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/12 15:30:08 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/29 20:37:24 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (*(s + i))
 	{
-		*(new + i) = (*f)(i, *(s + i));
+		*(new + i) = f(i, *(s + i));
 		i++;
 	}
 	*(new + i) = '\0';

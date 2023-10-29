@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 10:12:26 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/15 16:28:14 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/27 19:06:27 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,5 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
-	while (*(s))
-		ft_putchar_fd(*(s)++, fd);
+	write(fd, s, ft_strlen(s));
 }

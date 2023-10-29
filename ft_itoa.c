@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 21:03:57 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/14 13:59:45 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/29 20:24:34 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,16 @@ char	*ft_itoa(int n)
 
 	nbr = (long) n;
 	sign = check_sign(&nbr);
-	size = count_digits(nbr) + 1;
-	new = (char *) ft_calloc(sign + size, sizeof(char));
+	size = count_digits(nbr);
+	new = (char *) ft_calloc(sign + size + 1, sizeof(char));
 	if (!new)
 		return (0);
 	if (nbr == 0)
 		*(new) = '0';
-	*(new + sign + --size) = '\0';
+	*(new + sign + size--) = '\0';
 	while (nbr > 0)
 	{
-		*(new + --size + sign) = (nbr % 10) + 48;
+		*(new + size-- + sign) = (nbr % 10) + 48;
 		nbr /= 10;
 	}
 	if (sign)

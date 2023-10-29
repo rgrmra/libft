@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 21:17:55 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/14 13:57:41 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/29 20:18:07 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*new;
 	size_t	size1;
 	size_t	size2;
-	size_t	i;
 
 	if (!s1 || !s2)
 		return (0);
@@ -26,11 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new = (char *) ft_calloc(size1 + size2 + 1, sizeof(char));
 	if (!new)
 		return (0);
-	i = 0;
-	while (*s1)
-		*(new + i++) = (char) *(s1)++;
-	while (*s2)
-		*(new + i++) = (char) *(s2)++;
-	*(new + i) = '\0';
+	ft_strlcpy(new, s1, size1 + 1);
+	ft_strlcat(new, s2, size1 + size2 + 1);
 	return (new);
 }

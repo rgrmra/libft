@@ -6,91 +6,88 @@
 #    By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 10:01:10 by rde-mour          #+#    #+#              #
-#    Updated: 2023/10/14 14:35:11 by rde-mour         ###   ########.org.br    #
+#    Updated: 2023/10/29 19:04:40 by rde-mour         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
-SRCS = ft_isalpha.c \
-		  ft_isdigit.c \
-		  ft_isalnum.c \
-		  ft_isascii.c \
-		  ft_isprint.c \
-		  ft_strlen.c \
-		  ft_memset.c \
-		  ft_bzero.c \
-		  ft_toupper.c \
-		  ft_tolower.c \
-		  ft_strchr.c \
-		  ft_strrchr.c \
-		  ft_strncmp.c \
-		  ft_memchr.c \
-		  ft_memcpy.c \
-		  ft_memcmp.c \
-		  ft_strlcpy.c \
-		  ft_strlcat.c \
-		  ft_atoi.c \
-		  ft_calloc.c \
-		  ft_strdup.c \
-		  ft_memmove.c \
-		  ft_strnstr.c \
-		  ft_substr.c \
-		  ft_strjoin.c \
-		  ft_strtrim.c \
-		  ft_itoa.c \
-		  ft_strmapi.c \
-		  ft_striteri.c \
-		  ft_putchar_fd.c \
-		  ft_putstr_fd.c \
-		  ft_putendl_fd.c \
-		  ft_putnbr_fd.c \
-		  ft_split.c
+NAME				= libft.a
 
-BONUS = ft_lstnew.c \
-		ft_lstadd_front.c \
-		ft_lstsize.c \
-		ft_lstlast.c \
-		ft_lstadd_back.c \
-		ft_lstdelone.c \
-		ft_lstclear.c \
-		ft_lstiter.c \
-		ft_lstmap.c
+SRCS				= ft_isalpha.c \
+					  ft_isdigit.c \
+					  ft_isalnum.c \
+					  ft_isascii.c \
+					  ft_isprint.c \
+					  ft_strlen.c \
+					  ft_memset.c \
+					  ft_bzero.c \
+					  ft_toupper.c \
+					  ft_tolower.c \
+					  ft_strchr.c \
+					  ft_strrchr.c \
+					  ft_strncmp.c \
+					  ft_memchr.c \
+					  ft_memcpy.c \
+					  ft_memcmp.c \
+					  ft_strlcpy.c \
+					  ft_strlcat.c \
+					  ft_atoi.c \
+					  ft_calloc.c \
+					  ft_strdup.c \
+					  ft_memmove.c \
+					  ft_strnstr.c \
+					  ft_substr.c \
+					  ft_strjoin.c \
+					  ft_strtrim.c \
+					  ft_itoa.c \
+					  ft_strmapi.c \
+					  ft_striteri.c \
+					  ft_putchar_fd.c \
+					  ft_putstr_fd.c \
+					  ft_putendl_fd.c \
+					  ft_putnbr_fd.c \
+					  ft_split.c
 
-HEADER = ./ 
+BONUS				= ft_lstnew_bonus.c \
+					  ft_lstadd_front_bonus.c \
+					  ft_lstsize_bonus.c \
+					  ft_lstlast_bonus.c \
+					  ft_lstadd_back_bonus.c \
+					  ft_lstdelone_bonus.c \
+					  ft_lstclear_bonus.c \
+					  ft_lstiter_bonus.c \
+					  ft_lstmap_bonus.c
 
-OBJS = $(SRCS:%.c=%.o)
-OBJSBONUS = $(BONUS:%.c=%.o)
+INCLUDES			= ./ 
 
-CC = cc
-FLAGS = -Wall -Wextra -Werror
+OBJS				= $(SRCS:%.c=%.o)
+OBJSBONUS			= $(BONUS:%.c=%.o)
 
-ifdef WITH_BONUS
-	OBJS += $(OBJSBONUS)
+COMPILER 			= cc
+CFLAGS 				= -Wall -Wextra -Werror
+
+ifdef 				WITH_BONUS
+					OBJS = $(OBJSBONUS)
 endif
 
-all: $(NAME)
+all: 				$(NAME)
 
-$(NAME): $(OBJS)
-	@echo "Creating archive: $@"
-	@ar rc -s $(NAME) $(OBJS)
+$(NAME): 			$(OBJS)
+					@echo "Creating archive: $@"
+					@ar rc -s $(NAME) $(OBJS)
 
 %.o: %.c
-	@echo "Compiling: $<"
-	@$(CC) $(FLAGS) -c $< -o $@ -I$(HEADER)
+					@echo "Compiling: $<"
+					@$(COMPILER) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
 bonus:
-	@make WITH_BONUS=TRUE --no-print-directory
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJSBONUS)
+					@make WITH_BONUS=TRUE --no-print-directory
 
 clean:
-	rm -f *.o
+					rm -f *.o
 
-fclean: clean
-	rm -f $(NAME)
+fclean: 			clean
+					rm -f $(NAME)
 
-re: fclean all
+re:					fclean all
 
-.PHONY: all clean fclean re
+.PHONY:			 	all clean fclean re

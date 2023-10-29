@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 16:47:21 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/29 19:48:17 by rde-mour         ###   ########.org.br   */
+/*   Created: 2023/10/12 18:20:13 by rde-mour          #+#    #+#             */
+/*   Updated: 2023/10/29 19:22:51 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+t_list	*ft_lstlast(t_list *list)
 {
-	const char	*str;
-
-	str = s;
-	while (*str)
-		str++;
-	return (str - s);
+	if (!list)
+		return (0);
+	while (list -> next != 0)
+	{
+		list = list -> next;
+	}
+	return (list);
 }

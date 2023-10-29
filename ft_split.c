@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 10:25:14 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/16 21:54:52 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/29 20:52:18 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,19 @@ static size_t	count_words(const char *s, char c)
 	size_t	words;
 
 	words = 0;
-	while (*(s))
+	while (*s)
 	{
-		while (*(s) && *(s) == c)
+		while (*s && *s == c)
 			s++;
-		if (*(s))
+		if (*s)
 			words++;
-		while (*(s) && *(s) != c)
+		while (*s && *s != c)
 			s++;
 	}
 	return (words);
 }
 
-static char	*get_word(const char **s, char c)
+static char	*find_word(const char **s, char c)
 {
 	size_t	end;
 	char	*word;
@@ -60,6 +60,15 @@ char	**ft_split(const char *s, char c)
 		return (0);
 	i = 0;
 	while (words--)
-		new[i++] = get_word(&s, c);
+	{
+		*(new + i) = find_word(&s, c);
+		if (!(*(new + i++)))
+		{
+			while (*(new + --i))
+				free(*(new + i));
+			free(new);
+			return (0);
+		}
+	}
 	return (new);
 }
