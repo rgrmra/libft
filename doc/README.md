@@ -112,7 +112,7 @@ char    *ft_itoa(int i);
 
 <br>
 
-- **[ft_lstadd_back](./doc/ft_lstadd_back.md)** | **[source code](./ft_lstadd_back.c)**<br>
+- **[ft_lstadd_back](./doc/ft_lstadd_back.md)** | **[source code](./ft_lstadd_back_bonus.c)**<br>
     
 ```c
 void    ft_lstadd_back(t_list **lst, t_list *new);
@@ -120,7 +120,7 @@ void    ft_lstadd_back(t_list **lst, t_list *new);
 
 <br>
 
-- **[ft_lstadd_front](./doc/ft_lstadd_front.md)** | **[source code](./ft_lstadd_front.c)**<br>
+- **[ft_lstadd_front](./doc/ft_lstadd_front.md)** | **[source code](./ft_lstadd_front_bonus.c)**<br>
     
 ```c
 void    ft_lstadd_front(t_list **lst, t_list *new);
@@ -128,7 +128,7 @@ void    ft_lstadd_front(t_list **lst, t_list *new);
 
 <br>
 
-- **[ft_lstclear](./doc/ft_lstclear.md)** | **[source code](./ft_lstclear.c)**<br>
+- **[ft_lstclear](./doc/ft_lstclear.md)** | **[source code](./ft_lstclear_bonus.c)**<br>
     
 ```c
 void    ft_lstclear(t_list **lst, void (*del)(void *));
@@ -136,7 +136,7 @@ void    ft_lstclear(t_list **lst, void (*del)(void *));
 
 <br>
 
-- **[ft_lstdelone](./doc/ft_lstdelone.md)** | **[source code](./ft_lstdelone.c)**<br>
+- **[ft_lstdelone](./doc/ft_lstdelone.md)** | **[source code](./ft_lstdelone_bonus.c)**<br>
     
 ```c
 void    ft_lstdelone(t_list *lst, void (*del)(void *));
@@ -144,7 +144,7 @@ void    ft_lstdelone(t_list *lst, void (*del)(void *));
 
 <br>
 
-- **[ft_lstiter](./doc/ft_lstiter.md)** | **[source code](./ft_lstiter.c)**<br>
+- **[ft_lstiter](./doc/ft_lstiter.md)** | **[source code](./ft_lstiter_bonus.c)**<br>
     
 ```c
 void    ft_lstiter(t_list *lst, void (*f)(void *));
@@ -152,7 +152,7 @@ void    ft_lstiter(t_list *lst, void (*f)(void *));
 
 <br>
 
-- **[ft_lstlast](./doc/ft_lstlast.md)** | **[source code](./ft_lstlast.c)**<br>
+- **[ft_lstlast](./doc/ft_lstlast.md)** | **[source code](./ft_lstlast_bonus.c)**<br>
     
 ```c
 t_list    ft_lstlast(t_list *lst);
@@ -160,7 +160,7 @@ t_list    ft_lstlast(t_list *lst);
 
 <br>
 
-- **[ft_lstmap](./doc/ft_lstmap.md)** | **[source code](./ft_lstmap.c)**<br>
+- **[ft_lstmap](./doc/ft_lstmap.md)** | **[source code](./ft_lstmap_bonus.c)**<br>
     
 ```c
 t_list    ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
@@ -168,7 +168,7 @@ t_list    ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 <br>
 
-- **[ft_lstnew](./doc/ft_lstnew.md)** | **[source code](./ft_lstnew.c)**<br>
+- **[ft_lstnew](./doc/ft_lstnew.md)** | **[source code](./ft_lstnew_bonus.c)**<br>
     
 ```c
 t_list    *ft_lstnew(void *content);
@@ -176,7 +176,7 @@ t_list    *ft_lstnew(void *content);
 
 <br>
 
-- **[ft_lstsize](./doc/ft_lstsize.md)** | **[source code](./ft_lstsize.c)**<br>
+- **[ft_lstsize](./doc/ft_lstsize.md)** | **[source code](./ft_lstsize_bonus.c)**<br>
     
 ```c
 int    ft_lstsize(t_list *lst);
