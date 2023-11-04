@@ -192,7 +192,6 @@ int    ft_isascii(int i);
 ```c
 int    ft_isdigit(int i);
 ```
----
 <br>
 </details>
 <details>
