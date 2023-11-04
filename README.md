@@ -22,361 +22,582 @@ It's a collection of functions made by myself that behaves as the originals.
 
 **Type Definitions:**
 
-- **size_t**<br>
-  Unsigned integral type of the result of the sizeof operator. As described in _<stddef.h>_.
+<details>
+    <summary><b>size_t</b></summary>
+  <br> 
 
-- **[list_t](./list_t.c)** | **[source code](../libft.h)**<br>
-Linked list structure that provides the folowing filds:
+> Unsigned integral type of the result of the sizeof operator. As described in _<stddef.h>_.
+
+<br>
+</details>
+<details>
+    <summary><b>t_list</b></summary>
+    <br>
+
+> Linked list structure that provides the folowing filds:
+
+**[source code](../libft.h)**
 
 ```c
 void            *content;
 struct s_list    next;
 ```
-
+<br>
+</details>
 <br>
 
 **Declarations:**
 
 #### The following are declared as functions and may also be defined as macros. Function prototypes must be provided for use with an ISO C compiler.
-/
 
 <details>
-    <sumary>-  **[ft_atoi](./ft_atoi.c)**</sumary>
-    Converts the initial portion of the string containing numeric characters to integer.
+    <summary><b>ft_atoi</b></summary>
+    <br>
+
+> Converts the initial portion of the string containing numeric characters to integer.
+
+**[source code](./ft_atoi.c)**
+
 ```c
 int    ft_atoi(const char *nptr);
 ```
-</details>
-
 <br>
+</details>
+<details>
+    <summary><b>ft_bzero</b></summary>
+    <br>
 
-- **[ft_bzero](./ft_bzero.c)**<br>
-    Erase all bytes of the memory required with zero.
+> Erase all bytes of the memory required with zero.
+
+**[source code](./ft_bzero.c)**
+
 ```c
 void    ft_bzero(void *s, size_t n);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_calloc</b></summary>
+    <br>
 
-- **[ft_calloc](./ft_calloc.c)**<br>
-    Alloc a required space of memory and sets all bytes to zero.
+> Alloc a required space of memory and sets all bytes to zero.
+
+**[source code](./ft_calloc.c)**
+
 ```c
 void    *ft_calloc(size_t nmemb, size_t size);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_isalnum</b></summary>
+    <br>
 
--    **[ft_isalnum](./ft_isalnum.c)**<br>
-    Checks for an alphanumeric character.
+> Checks for an alphanumeric character.
+
+**[source code](./ft_isalnum.c)**
+
 ```c
 int    ft_isalnum(int i);
 ```
 
-<br>
+</details>
+<details>
+    <summary><b>ft_isalpha</b></summary>
+    <br>
 
-- **[ft_isalpha](./ft_isalpha.c)**<br>
-    Checks for an alphabetic character.
+> Checks for an alphabetic character.
+
+**[source code](./ft_isalpha.c)**
+
 ```c
 int    ft_isalpha(int i);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_isascii</b></summary>
+    <br>
 
-- **[ft_isascii](./ft_isascii.c)**<br>
-    Checks whether character is a 7-bit US-ASCII character code.
+> Checks whether character is a 7-bit US-ASCII character code.
+
+**[source code](./ft_isascii.c)**
+
 ```c
 int    ft_isascii(int i);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_isdigit</b></summary>
+    <br>
 
-- **[ft_isdigit](./ft_isdigit.c)**<br>
-    Checks for a digit (0 through 9).
+> Checks for a digit (0 through 9).
+
+**[source code](./ft_isdigit.c)**
+
 ```c
 int    ft_isdigit(int i);
 ```
-
+---
 <br>
+</details>
+<details>
+    <summary><b>ft_isprint</b></summary>
+    <br>
 
-- **[ft_isprint](./ft_isprint.c)**<br>
-    Checks for any printable character including space.
+> Checks for any printable character including space.
+
+**[source code](./ft_isprint.c)**
+
 ```c
 int    ft_isprint(int i);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_itoa</b></summary>
+    <br>
 
-- **[ft_itoa](./ft_itoa.c)**<br>
-    Converts a integer to string.
+> Converts a integer to string.
+
+**[source code](./ft_itoa.c)**
+
 ```c
 char    *ft_itoa(int i);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_lstadd_back</b></summary>
+    <br>
 
-- **[ft_lstadd_back](./ft_lstadd_back.c)**<br>
-    
+> Append a new node to the end of a list.
+
+**[source code](./ft_lstadd_back.c)**
+
 ```c
 void    ft_lstadd_back(t_list **lst, t_list *new);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_lstadd_front</b></summary>
+    <br>
 
-- **[ft_lstadd_front](./ft_lstadd_front.c)**<br>
+> Append a new node to the begin of a list.
+
+**[source code](./ft_lstadd_front.c)**
     
 ```c
 void    ft_lstadd_front(t_list **lst, t_list *new);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_lstclear</b></summary>
+    <br>
 
-- **[ft_lstclear](./ft_lstclear.c)**<br>
+> Erases all content and nodes of a list.
+
+**[source code](./ft_lstclear.c)**
     
 ```c
 void    ft_lstclear(t_list **lst, void (*del)(void *));
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_lstdelone</b></summary>
+    <br>
 
-- **[ft_lstdelone](./ft_lstdelone.c)**<br>
+> Deletes one node of a list.
+
+**[source code](./ft_lstdelone.c)**
     
 ```c
 void    ft_lstdelone(t_list *lst, void (*del)(void *));
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_lstiter</b></summary>
+    <br>
 
-- **[ft_lstiter](./ft_lstiter.c)**<br>
+> Applies a function to each content of a node of a list.
+
+**[source code](./ft_lstiter.c)**
     
 ```c
 void    ft_lstiter(t_list *lst, void (*f)(void *));
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_lstlast</b></summary>
+    <br>
 
-- **[ft_lstlast](./ft_lstlast.c)**<br>
+> Gets the last node of a list.
+
+**[source code](./ft_lstlast.c)**
     
 ```c
 t_list    ft_lstlast(t_list *lst);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_lstmap</b></summary>
+    <br>
 
-- **[ft_lstmap](./ft_lstmap.c)**<br>
+> Returns a new list applying a required function to each node of the list.
+
+**[source code](./ft_lstmap.c)**
     
 ```c
 t_list    ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_lstnew</b></summary>
+    <br>
 
-- **[ft_lstnew](./ft_lstnew.c)**<br>
+> Creates a new node.
+
+**[source code](./ft_lstnew.c)**
     
 ```c
 t_list    *ft_lstnew(void *content);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_lstsize</b></summary>
+    <br>
 
-- **[ft_lstsize](./ft_lstsize.c)**<br>
+> Gets the size of a list.
+
+**[source code](./ft_lstsize.c)**
     
 ```c
 int    ft_lstsize(t_list *lst);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_memchr</b></summary>
+    <br>
 
-- **[ft_memchr](./ft_memchr.c)**<br>
+> Finds the first required byte in an area pointed in the memory.
+
+**[source code](./ft_memchr.c)**
     
 ```c
 void    *ft_memchr(const void *s, int c, size_t n);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_memcmp</b></summary>
+    <br>
 
-- **[ft_memcmp](./ft_memcmp.c)**<br>
+>  Compares the amount of bytes between two areas pointed in the memory.
+
+**[source code](./ft_memcmp.c)**
     
 ```c
 int    ft_memcmp(const void *s1, const void *s2, size_t n);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_memcpy</b></summary>
+    <br>
 
-- **[ft_memcpy](./ft_memcpy.c)**<br>
+> Copies the required amount of bytes from an area to another area pointed in the memory.
+
+**[source code](./ft_memcpy.c)**
+
     
 ```c
 void    *ft_memcpy(void *dest, const void *src, size_t n);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_memmove</b></summary>
+    <br>
 
-- **[ft_memmove](./ft_memmove.c)**<br>
+> Moves an requried amount of bytes from an area to another area pointed in the memory.
+
+**[source code](./ft_memmove.c)**
     
 ```c
 void    *ft_memmove(void *dest, const void *src, size_t	n);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_memset</b></summary>
+    <br>
 
-- **[ft_memset](./ft_memset.c)**<br>
+> Sets all bytes required in the memory area pointed with the byte informed.
+
+**[source code](./ft_memset.c)**
     
 ```c
 void    *ft_memset(void *s, int c, size_t n);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_putchar_fd</b></summary>
+    <br>
 
-- **[ft_putchar_fd](./ft_putchar_fd.c)**<br>
+> Prints a char in the required filedescriptor.
+
+**[source code](./ft_putchar_fd.c)**
     
 ```c
 void    ft_putchar_fd(char c, int fd);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_putendl_fd</b></summary>
+    <br>
 
-- **[ft_putendl_fd](./ft_putendl_fd.c)**<br>
+> Prints a string followed by a new line in the required filedescriptor.
+
+**[source code](./ft_putendl_fd.c)**
     
 ```c
 void    ft_putendl_fd(char *s, int fd);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_putnbr_fd</b></summary>
+    <br>
 
-- **[ft_putnbr_fd](./ft_putnbr_fd.c)**<br>
+> Prints a integer number in the required filedescriptor.
+
+**[source code](./ft_putnbr_fd.c)**
     
 ```c
 void    ft_putnbr_fd(int n, int fd);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_putstr_fd</b></summary>
+    <br>
 
-- **[ft_putstr_fd](./ft_putstr_fd.c)**<br>
+> Prints a string in the required filedescriptor.
+
+**[source code](./ft_putstr_fd.c)**
     
 ```c
 void    ft_putstr_fd(char *s, int fd);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_split</b></summary>
+    <br>
 
-- **[ft_split](./ft_split.c)**<br>
+> Splits a constant string into an allocated array of strings containg the words splited by the required separator.
+
+**[source code](./ft_split.c)**
     
 ```c
 char    **ft_split(const char *s, char c);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_strchr</b></summary>
+    <br>
 
-- **[ft_strchr](./ft_strchr.c)**<br>
+> Finds the first required character in a constant string.
+
+**[source code](./ft_strchr.c)**
     
 ```c
 char    *ft_strchr(const char *s, int c);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_strdup</b></summary>
+    <br>
 
-- **[ft_strdup](./ft_strdup.c)**<br>
+> Duplicates a required constant string.
+
+**[source code](./ft_strdup.c)**
     
 ```c
 char    *ft_strdup(const char *s);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_striteri</b></summary>
+    <br>
 
-- **[ft_striteri](./ft_striteri.c)**<br>
+> Iterates a function to each character of a string.
+
+**[source code](./ft_striteri.c)**
     
 ```c
 void    ft_striteri(char *s, void (*f)(unsigned int, char *));
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_strjoin</b></summary>
+    <br>
 
-- **[ft_strljoin](./ft_strljoin.c)**<br>
+> Concatenates a new string containg the two strings informed.
+
+**[source code](./ft_strljoin.c)**
     
 ```c
 char    *ft_strjoin(const char *s1, const char *s2);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_strlcat</b></summary>
+    <br>
 
-- **[ft_strlcat](./ft_strlcat.c)**<br>
+> Concatemates a string to another string informed.
+
+**[source code](./ft_strlcat.c)**
     
 ```c
 size_t    ft_strlcat(char *dest, char *src, size_t size);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_strlcpy</b></summary>
+    <br>
 
-- **[ft_strlcpy](./ft_strlcpy.c)**<br>
+> Copies the content of a string to another string informed.
+
+**[source code](./ft_strlcpy.c)**
     
 ```c
 size_t    ft_strlcpy(char *dest, char *src, size_t size);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_strlen</b></summary>
+    <br>
 
-- **[ft_strlen](./ft_strlen.c)**<br>
+> Gets the size of a constant string.
+
+**[source code](./ft_strlen.c)**
     
 ```c
 size_t    ft_strlen(const char *s);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_strmapi</b></summary>
+    <br>
 
-- **[ft_strmapi](./ft_strmapi.c)**<br>
+> Duplicates a new string and applies a function to each character of the string.
+
+**[source code](./ft_strmapi.c)**
     
 ```c
 char    *ft_strmapi(const char *s, char (*f)(unsigned int, char));
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_strncmp</b></summary>
+    <br>
 
-- **[ft_strncmp](./ft_strncmp.c)**<br>
+> Compares two strings.
+
+**[source code](./ft_strncmp.c)**
     
 ```c
 int    ft_strncmp(const char *s1, const char *s2, size_t n);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_strrchr</b></summary>
+    <br>
 
-- **[ft_strrchr](./ft_strrchr.c)**<br>
+> Finds the last required character in a constant string.
+
+**[source code](./ft_strrchr.c)**
     
 ```c
 char    *ft_strrchr(const char *s, int c);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_strtrim</b></summary>
+    <br>
 
-- **[ft_strtrim](./ft_strtrim.c)**<br>
+> Removes the amount of required characters in the begin and end of the string.
+
+**[source code](./ft_strtrim.c)**
     
 ```c
 char    *ft_strtrim(const char *s1, const char *set);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_substr</b></summary>
+    <br>
 
-- **[ft_substr](./ft_substr.c)**<br>
+> Generates a sub new string from a required string.
+
+**[source code](./ft_substr.c)**
     
 ```c
 char    *ft_substr(const char *s, unsigned int start, size_t len);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_tolower</b></summary>
+    <br>
 
-- **[ft_tolower](./ft_tolower.c)**<br>
+> Changes all uppercase characters to lowecase.
+
+**[source code](./ft_tolower.c)**
     
 ```c
 int    ft_tolower(int i);
 ```
-
 <br>
+</details>
+<details>
+    <summary><b>ft_toupper</b></summary>
+    <br>
 
-- **[ft_toupper](./ft_toupper.c)**<br>
+> Changes all lowecase characters to uppercase.
+
+**[source code](./ft_toupper.c)**
     
 ```c
 int    ft_toupper(int i);
 ```
-
 <br>
+</details>
 
 - Inclusion of _"libft.h"_ header may also make visible all symbols from _<stddef.h>_ and _<stdlib.h>_.
 
