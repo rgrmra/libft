@@ -7,18 +7,18 @@ It's a collection of functions made by myself that behaves as the originals.
 ## Menu
 
 1. [How to use it?](#how-to-use-it)
-   - [Mandatory](https://github.com/rgrmra/libft/blob/master/README.md#mandatory)
-   - [Bonus](https://github.com/rgrmra/libft/blob/master/README.md#bonus)
-   - [Remove](https://github.com/rgrmra/libft/blob/master/README.md#remove)
-   - [Declare](https://github.com/rgrmra/libft/blob/master/README.md#declare)
-2. [Libft Documentation](https://github.com/rgrmra/libft/blob/master/README.md#libft-documentation)
-   - [Name](https://github.com/rgrmra/libft/blob/master/README.md#name)     
-   - [Synopsis](https://github.com/rgrmra/libft/blob/master/README.md#synopsis)
-   - [Description](https://github.com/rgrmra/libft/blob/master/README.md#description)
-       - [Types Definitions](https://github.com/rgrmra/libft/blob/master/README.md#type-definitions)
-       - [Declarations](https://github.com/rgrmra/libft/blob/master/README.md#declarations)
-   - [Application Usage](https://github.com/rgrmra/libft/blob/master/README.md#application-usage)
-   - [Future Directions](https://github.com/rgrmra/libft/blob/master/README.md#future-directions) 
+   - [Mandatory](#mandatory)
+   - [Bonus](#bonus)
+   - [Remove](#remove)
+   - [Declare](#declare)
+2. [Libft Documentation](#libft-documentation)
+   - [Name](#name)     
+   - [Synopsis](#synopsis)
+   - [Description](#description)
+       - [Types Definitions](#type-definitions)
+       - [Declarations](#declarations)
+   - [Application Usage](#application-usage)
+   - [Future Directions](#future-directions) 
 
 ## How to use it?
 
