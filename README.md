@@ -11,7 +11,7 @@ It's a collection of functions made by myself that behaves as the originals.
    - [Bonus](https://github.com/rgrmra/libft/blob/master/README.md#bonus)
    - [Remove](https://github.com/rgrmra/libft/blob/master/README.md#remove)
    - [Declare](https://github.com/rgrmra/libft/blob/master/README.md#declare)
-2. [Libft Documentation](https://github.com/rgrmra/libft/blob/master/README.md#documentation)
+2. [Libft Documentation](https://github.com/rgrmra/libft/blob/master/README.md#libft-documentation)
    - [Name](https://github.com/rgrmra/libft/blob/master/README.md#name)     
    - [Synopsis](https://github.com/rgrmra/libft/blob/master/README.md#synopsis)
    - [Description](https://github.com/rgrmra/libft/blob/master/README.md#description)
