@@ -6,7 +6,7 @@ It's a collection of functions made by myself that behaves as the originals.
 
 ## Menu
 
-1. [How to use it?](https://github.com/rgrmra/libft/blob/master/README.md#how-to-use-it)
+1. [How to use it?](#how-to-use-it)
    - [Mandatory](https://github.com/rgrmra/libft/blob/master/README.md#mandatory)
    - [Bonus](https://github.com/rgrmra/libft/blob/master/README.md#bonus)
    - [Remove](https://github.com/rgrmra/libft/blob/master/README.md#remove)
