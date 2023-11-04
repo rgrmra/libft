@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 19:45:42 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/29 19:39:14 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/10/31 19:16:41 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,19 @@ t_list	*ft_lstmap(t_list *list, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
 	t_list	*new;
+	t_list	*tmp;
 
 	if (!list || !f || !del)
 		return (0);
 	new_list = 0;
 	while (list)
 	{
-		new = ft_lstnew(f(list -> content));
+		tmp = f(list -> content);
+		new = ft_lstnew(tmp);
 		if (!new)
 		{
 			ft_lstclear(&new_list, del);
+			free (tmp);
 			return (0);
 		}
 		ft_lstadd_back(&new_list, new);

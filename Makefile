@@ -6,7 +6,7 @@
 #    By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 10:01:10 by rde-mour          #+#    #+#              #
-#    Updated: 2023/10/29 19:04:40 by rde-mour         ###   ########.org.br    #
+#    Updated: 2023/11/04 11:15:48 by rde-mour         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,7 @@ COMPILER 			= cc
 CFLAGS 				= -Wall -Wextra -Werror
 
 ifdef 				WITH_BONUS
-					OBJS = $(OBJSBONUS)
+					OBJS += $(OBJSBONUS)
 endif
 
 all: 				$(NAME)
@@ -83,11 +83,13 @@ bonus:
 					@make WITH_BONUS=TRUE --no-print-directory
 
 clean:
-					rm -f *.o
+					@echo "Deleting all objects"
+					@rm -f $(OBJS) $(OBJSBONUS)
 
 fclean: 			clean
-					rm -f $(NAME)
+					@echo "Deleting $(NAME)"
+					@rm -f $(NAME)
 
 re:					fclean all
 
-.PHONY:			 	all clean fclean re
+.PHONY:			 	all bonus clean fclean re

@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 10:25:14 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/29 20:52:18 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2023/11/02 17:38:00 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,9 @@ char	**ft_split(const char *s, char c)
 		*(new + i) = find_word(&s, c);
 		if (!(*(new + i++)))
 		{
-			while (*(new + --i))
-				free(*(new + i));
+			i = 0;
+			while (*(new + i))
+				free(*(new + i++));
 			free(new);
 			return (0);
 		}
