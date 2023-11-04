@@ -6,19 +6,19 @@ It's a collection of functions made by myself that behaves as the originals.
 
 ## Menu
 
-1. [How to use it?](https://github.com/rgrmra/libft/edit/master/README.md#how-to-use-it)
-   - [Mandatory](https://github.com/rgrmra/libft/edit/master/README.md#mandatory)
-   - [Bonus](https://github.com/rgrmra/libft/edit/master/README.md#bonus)
-   - [Remove](https://github.com/rgrmra/libft/edit/master/README.md#remove)
-   - [Declare](https://github.com/rgrmra/libft/edit/master/README.md#declare)
-2. [Libft Documentation](https://github.com/rgrmra/libft/edit/master/README.md#documentation)
-   - [Name](https://github.com/rgrmra/libft/edit/master/README.md#name)     
-   - [Synopsis](https://github.com/rgrmra/libft/edit/master/README.md#synopsis)
-   - [Description](https://github.com/rgrmra/libft/edit/master/README.md#description)
-       - [Types Definitions](https://github.com/rgrmra/libft/edit/master/README.md#type-definitions)
-       - [Declarations](https://github.com/rgrmra/libft/edit/master/README.md#declarations)
-   - [Application Usage](https://github.com/rgrmra/libft/edit/master/README.md#application-usage)
-   - [Future Directions](https://github.com/rgrmra/libft/edit/master/README.md#future-directions) 
+1. [How to use it?](https://github.com/rgrmra/libft/README.md#how-to-use-it)
+   - [Mandatory](https://github.com/rgrmra/libft/README.md#mandatory)
+   - [Bonus](https://github.com/rgrmra/libft/README.md#bonus)
+   - [Remove](https://github.com/rgrmra/libft/README.md#remove)
+   - [Declare](https://github.com/rgrmra/libft/README.md#declare)
+2. [Libft Documentation](https://github.com/rgrmra/libft/README.md#documentation)
+   - [Name](https://github.com/rgrmra/libft/README.md#name)     
+   - [Synopsis](https://github.com/rgrmra/libft/README.md#synopsis)
+   - [Description](https://github.com/rgrmra/libft/README.md#description)
+       - [Types Definitions](https://github.com/rgrmra/libft/README.md#type-definitions)
+       - [Declarations](https://github.com/rgrmra/libft/README.md#declarations)
+   - [Application Usage](https://github.com/rgrmra/libft/README.md#application-usage)
+   - [Future Directions](https://github.com/rgrmra/libft/README.md#future-directions) 
 
 ## How to use it?
 
