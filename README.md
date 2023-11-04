@@ -1,20 +1,36 @@
-#  Libft Documentation
+#  Libft
 
-It's theumentation of my personal libft made at 42 São Paulo to use in my projects.
+It's the documentation of my personal libft made at 42 São Paulo to use in my projects.
 
 It's a collection of functions made by myself that behaves as the originals.
+
+## Menu
+
+1. [How to use it?](https://github.com/rgrmra/libft/edit/master/README.md#how-to-use-it)
+   - [Mandatory](https://github.com/rgrmra/libft/edit/master/README.md#mandatory)
+   - [Bonus](https://github.com/rgrmra/libft/edit/master/README.md#bonus)
+   - [Remove](https://github.com/rgrmra/libft/edit/master/README.md#remove)
+   - [Declare](https://github.com/rgrmra/libft/edit/master/README.md#declare)
+2. [Libft Documentation](https://github.com/rgrmra/libft/edit/master/README.md#documentation)
+   - [Name](https://github.com/rgrmra/libft/edit/master/README.md#name)     
+   - [Synopsis](https://github.com/rgrmra/libft/edit/master/README.md#synopsis)
+   - [Description](https://github.com/rgrmra/libft/edit/master/README.md#description)
+       - [Types Definitions](https://github.com/rgrmra/libft/edit/master/README.md#type-definitions)
+       - [Declarations](https://github.com/rgrmra/libft/edit/master/README.md#declarations)
+   - [Application Usage](https://github.com/rgrmra/libft/edit/master/README.md#application-usage)
+   - [Future Directions](https://github.com/rgrmra/libft/edit/master/README.md#future-directions) 
 
 ## How to use it?
 
 Clone the repository to your project directory:
 
 ```shell
-https://github.com/rgrmra/libft.git
+git clone https://github.com/rgrmra/libft.git libft
 ```
 
 #### Mandatory:
 
-Then use the command `make` inside the _libft_ directory to build the compiled _libft archive_ the mandatory part of the project.
+Then use the command `make` inside the _libft_ directory to build the compiled _libft archive_ of the mandatory part of the project.
 
 #### Bonus:
 
@@ -28,7 +44,20 @@ To remove the objects compiled, use the command `make clean`.
 
 And, if you want to delete everything, use the command `make fclean`.
 
+#### Declare:
+To use the functions of the library you need to _include_ it in your project and compile your project with the _libft archive_.
+
+```c
+#include "libft.h"
+```
+
+```shell
+gcc main.c -I ./libft ./libft/libft.a
+```
+
 ---
+
+## Libft Documentation
 
 ### NAME
 
@@ -42,9 +71,9 @@ And, if you want to delete everything, use the command `make fclean`.
 
 ### DESCRIPTION
 
-#### The **"libft.h"** headers defines the folowing:
+The **"libft.h"** headers defines the folowing:
 
-**Type Definitions:**
+#### Type Definitions:
 
 <details>
     <summary><b>size_t</b></summary>
@@ -70,9 +99,9 @@ struct s_list    next;
 </details>
 <br>
 
-**Declarations:**
+#### Declarations:
 
-#### The following are declared as functions and may also be defined as macros. Function prototypes must be provided for use with an ISO C compiler.
+The following are declared as functions and may also be defined as macros. Function prototypes must be provided for use with an ISO C compiler.
 
 <details>
     <summary><b>ft_atoi</b></summary>
@@ -193,12 +222,12 @@ char    *ft_itoa(int i);
 <br>
 </details>
 <details>
-    <summary><b>ft_lstadd_back</b></summary>
+    <summary><b>ft_lstadd_back (bonus)</b></summary>
     <br>
 
 > Append a new node to the end of a list.
 
-**[source code](./ft_lstadd_back.c)**
+**[source code](./ft_lstadd_back_bonus.c)**
 
 ```c
 void    ft_lstadd_back(t_list **lst, t_list *new);
@@ -206,12 +235,12 @@ void    ft_lstadd_back(t_list **lst, t_list *new);
 <br>
 </details>
 <details>
-    <summary><b>ft_lstadd_front</b></summary>
+    <summary><b>ft_lstadd_front (bonus)</b></summary>
     <br>
 
 > Append a new node to the begin of a list.
 
-**[source code](./ft_lstadd_front.c)**
+**[source code](./ft_lstadd_front_bonus.c)**
     
 ```c
 void    ft_lstadd_front(t_list **lst, t_list *new);
@@ -219,12 +248,12 @@ void    ft_lstadd_front(t_list **lst, t_list *new);
 <br>
 </details>
 <details>
-    <summary><b>ft_lstclear</b></summary>
+    <summary><b>ft_lstclear (bonus)</b></summary>
     <br>
 
 > Erases all content and nodes of a list.
 
-**[source code](./ft_lstclear.c)**
+**[source code](./ft_lstclear_bonus.c)**
     
 ```c
 void    ft_lstclear(t_list **lst, void (*del)(void *));
@@ -232,12 +261,12 @@ void    ft_lstclear(t_list **lst, void (*del)(void *));
 <br>
 </details>
 <details>
-    <summary><b>ft_lstdelone</b></summary>
+    <summary><b>ft_lstdelone (bonus)</b></summary>
     <br>
 
 > Deletes one node of a list.
 
-**[source code](./ft_lstdelone.c)**
+**[source code](./ft_lstdelone_bonus.c)**
     
 ```c
 void    ft_lstdelone(t_list *lst, void (*del)(void *));
@@ -245,12 +274,12 @@ void    ft_lstdelone(t_list *lst, void (*del)(void *));
 <br>
 </details>
 <details>
-    <summary><b>ft_lstiter</b></summary>
+    <summary><b>ft_lstiter (bonus)</b></summary>
     <br>
 
 > Applies a function to each content of a node of a list.
 
-**[source code](./ft_lstiter.c)**
+**[source code](./ft_lstiter_bonus.c)**
     
 ```c
 void    ft_lstiter(t_list *lst, void (*f)(void *));
@@ -258,12 +287,12 @@ void    ft_lstiter(t_list *lst, void (*f)(void *));
 <br>
 </details>
 <details>
-    <summary><b>ft_lstlast</b></summary>
+    <summary><b>ft_lstlast (bonus)</b></summary>
     <br>
 
 > Gets the last node of a list.
 
-**[source code](./ft_lstlast.c)**
+**[source code](./ft_lstlast_bonus.c)**
     
 ```c
 t_list    ft_lstlast(t_list *lst);
@@ -271,12 +300,12 @@ t_list    ft_lstlast(t_list *lst);
 <br>
 </details>
 <details>
-    <summary><b>ft_lstmap</b></summary>
+    <summary><b>ft_lstmap (bonus)</b></summary>
     <br>
 
 > Returns a new list applying a required function to each node of the list.
 
-**[source code](./ft_lstmap.c)**
+**[source code](./ft_lstmap_bonus.c)**
     
 ```c
 t_list    ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
@@ -284,12 +313,12 @@ t_list    ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 <br>
 </details>
 <details>
-    <summary><b>ft_lstnew</b></summary>
+    <summary><b>ft_lstnew (bonus)</b></summary>
     <br>
 
 > Creates a new node.
 
-**[source code](./ft_lstnew.c)**
+**[source code](./ft_lstnew_bonus.c)**
     
 ```c
 t_list    *ft_lstnew(void *content);
@@ -297,12 +326,12 @@ t_list    *ft_lstnew(void *content);
 <br>
 </details>
 <details>
-    <summary><b>ft_lstsize</b></summary>
+    <summary><b>ft_lstsize (bonus)</b></summary>
     <br>
 
 > Gets the size of a list.
 
-**[source code](./ft_lstsize.c)**
+**[source code](./ft_lstsize_bonus.c)**
     
 ```c
 int    ft_lstsize(t_list *lst);
