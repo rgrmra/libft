@@ -4,6 +4,30 @@ It's theumentation of my personal libft made at 42 São Paulo to use in my proje
 
 It's a collection of functions made by myself that behaves as the originals.
 
+## How to use it?
+
+Clone the repository to your project directory:
+
+```shell
+https://github.com/rgrmra/libft.git
+```
+
+#### Mandatory:
+
+Then use the command `make` inside the _libft_ directory to build the compiled _libft archive_ the mandatory part of the project.
+
+#### Bonus:
+
+If you need the bonus part, use the command `make bonus` to include the bonus functions in the _libft archive_.
+
+#### Remove:
+
+To remove the objects compiled, use the command `make clean`. 
+
+#### Delete:
+
+And, if you want to delete everything, use the command `make fclean`.
+
 ---
 
 ### NAME
@@ -36,7 +60,7 @@ It's a collection of functions made by myself that behaves as the originals.
 
 > Linked list structure that provides the folowing filds:
 
-**[source code](../libft.h)**
+**[source code](./libft.h)**
 
 ```c
 void            *content;
