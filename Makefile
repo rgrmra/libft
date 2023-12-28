@@ -6,7 +6,7 @@
 #    By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 10:01:10 by rde-mour          #+#    #+#              #
-#    Updated: 2023/12/28 11:53:15 by rde-mour         ###   ########.org.br    #
+#    Updated: 2023/12/28 12:14:23 by rde-mour         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ YELLOW				= \033[0;93m
 BLUE				= \033[0;94m
 RESET				= \033[0m
 
-NAME				= libft.a
+NAME				= libftx.a
 
 FILES				= libft/ft_isalpha.c \
 					  libft/ft_isdigit.c \
