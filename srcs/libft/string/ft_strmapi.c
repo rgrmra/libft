@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 19:00:04 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/01/08 14:39:01 by rde-mour         ###   ########.org.br   */
+/*   Created: 2023/10/12 09:37:20 by rde-mour          #+#    #+#             */
+/*   Updated: 2024/01/08 14:52:52 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ft_string.h"
 
-# include "ft_ctype.h"
-# include "ft_printf_bonus.h"
-# include "ft_stdlib.h"
-# include "ft_stdlst.h"
-# include "ft_stdio.h"
-# include "ft_string.h"
-# include "get_next_line.h"
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
+{
+	unsigned int	i;
+	char			*new;
+	size_t			size;
 
-#endif
+	if (!s)
+		return (0);
+	size = ft_strlen(s);
+	new = (char *) ft_calloc(size + 1, sizeof(char));
+	if (!new)
+		return (0);
+	i = 0;
+	while (*(s + i))
+	{
+		*(new + i) = f(i, *(s + i));
+		i++;
+	}
+	*(new + i) = '\0';
+	return (new);
+}

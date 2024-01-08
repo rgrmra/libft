@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 19:00:04 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/01/08 14:39:01 by rde-mour         ###   ########.org.br   */
+/*   Created: 2023/10/11 18:56:49 by rde-mour          #+#    #+#             */
+/*   Updated: 2024/01/08 14:53:45 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ft_string.h"
 
-# include "ft_ctype.h"
-# include "ft_printf_bonus.h"
-# include "ft_stdlib.h"
-# include "ft_stdlst.h"
-# include "ft_stdio.h"
-# include "ft_string.h"
-# include "get_next_line.h"
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*new;
+	size_t	size;
 
-#endif
+	if (!s1 || !set)
+		return (0);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	size = ft_strlen(s1);
+	if (!size)
+		return (ft_strdup(""));
+	while (*(s1 + size) && ft_strchr(set, *(s1 + size)))
+		size--;
+	new = ft_substr(s1, 0, ++size);
+	return (new);
+}
