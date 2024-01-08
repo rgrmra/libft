@@ -6,62 +6,63 @@
 #    By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 10:01:10 by rde-mour          #+#    #+#              #
-#    Updated: 2023/12/28 12:14:23 by rde-mour         ###   ########.org.br    #
+#    Updated: 2024/01/08 14:26:30 by rde-mour         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
 
-RED					= \033[0;91m
-GREEN				= \033[0;92m
-YELLOW				= \033[0;93m
-BLUE				= \033[0;94m
-RESET				= \033[0m
+RED					= $(shell tput setaf 1)
+GREEN				= $(shell tput setaf 2)
+YELLOW				= $(shell tput setaf 3)
+BLUE				= $(shell tput setaf 4)
+MAGENT				= $(shell tput setaf 5)
+RESET				= $(shell tput sgr0)
 
 NAME				= libftx.a
 
-FILES				= libft/ft_isalpha.c \
-					  libft/ft_isdigit.c \
-					  libft/ft_isalnum.c \
-					  libft/ft_isascii.c \
-					  libft/ft_isprint.c \
-					  libft/ft_isspace.c \
-					  libft/ft_strlen.c \
-					  libft/ft_memset.c \
-					  libft/ft_bzero.c \
-					  libft/ft_toupper.c \
-					  libft/ft_tolower.c \
-					  libft/ft_strchr.c \
-					  libft/ft_strrchr.c \
-					  libft/ft_strncmp.c \
-					  libft/ft_memchr.c \
-					  libft/ft_memcpy.c \
-					  libft/ft_memcmp.c \
-					  libft/ft_strlcpy.c \
-					  libft/ft_strlcat.c \
-					  libft/ft_atoi.c \
-					  libft/ft_calloc.c \
-					  libft/ft_strdup.c \
-					  libft/ft_memmove.c \
-					  libft/ft_strnstr.c \
-					  libft/ft_substr.c \
-					  libft/ft_strjoin.c \
-					  libft/ft_strtrim.c \
-					  libft/ft_itoa.c \
-					  libft/ft_strmapi.c \
-					  libft/ft_striteri.c \
-					  libft/ft_putchar_fd.c \
-					  libft/ft_putstr_fd.c \
-					  libft/ft_putendl_fd.c \
-					  libft/ft_putnbr_fd.c \
-					  libft/ft_split.c \
-					  libft/ft_lstnew_bonus.c \
-					  libft/ft_lstadd_front_bonus.c \
-					  libft/ft_lstsize_bonus.c \
-					  libft/ft_lstlast_bonus.c \
-					  libft/ft_lstadd_back_bonus.c \
-					  libft/ft_lstdelone_bonus.c \
-					  libft/ft_lstclear_bonus.c \
-					  libft/ft_lstiter_bonus.c \
-					  libft/ft_lstmap_bonus.c \
+FILES				= libft/ctype/ft_isalnum.c \
+					  libft/ctype/ft_isalpha.c \
+					  libft/ctype/ft_isascii.c \
+					  libft/ctype/ft_isdigit.c \
+					  libft/ctype/ft_isprint.c \
+					  libft/ctype/ft_isspace.c \
+					  libft/ctype/ft_tolower.c \
+					  libft/ctype/ft_toupper.c \
+					  libft/stdlib/ft_atoi.c \
+					  libft/stdlib/ft_calloc.c \
+					  libft/stdlib/ft_itoa.c \
+					  libft/string/ft_bzero.c \
+					  libft/string/ft_memchr.c \
+					  libft/string/ft_memcmp.c \
+					  libft/string/ft_memcpy.c \
+					  libft/string/ft_memmove.c \
+					  libft/string/ft_memset.c \
+					  libft/string/ft_split.c \
+					  libft/string/ft_strchr.c \
+					  libft/string/ft_strdup.c \
+					  libft/string/ft_strjoin.c \
+					  libft/string/ft_strlcat.c \
+					  libft/string/ft_strlcpy.c \
+					  libft/string/ft_strlen.c \
+					  libft/string/ft_strncmp.c \
+					  libft/string/ft_strnstr.c \
+					  libft/string/ft_strrchr.c \
+					  libft/string/ft_strtrim.c \
+					  libft/string/ft_strmapi.c \
+					  libft/string/ft_striteri.c \
+					  libft/string/ft_substr.c \
+					  libft/stdio/ft_putchar_fd.c \
+					  libft/stdio/ft_putstr_fd.c \
+					  libft/stdio/ft_putendl_fd.c \
+					  libft/stdio/ft_putnbr_fd.c \
+					  libft/stdlst/ft_lstnew_bonus.c \
+					  libft/stdlst/ft_lstadd_front_bonus.c \
+					  libft/stdlst/ft_lstsize_bonus.c \
+					  libft/stdlst/ft_lstlast_bonus.c \
+					  libft/stdlst/ft_lstadd_back_bonus.c \
+					  libft/stdlst/ft_lstdelone_bonus.c \
+					  libft/stdlst/ft_lstclear_bonus.c \
+					  libft/stdlst/ft_lstiter_bonus.c \
+					  libft/stdlst/ft_lstmap_bonus.c \
 					  gnl/get_next_line.c \
 					  gnl/get_next_line_utils.c \
 					  printf/ft_printf_bonus.c \
@@ -90,20 +91,20 @@ CFLAGS 				= -Wall -Wextra -Werror -g3
 all: 				$(NAME)
 
 $(NAME): 			$(OBJS)
-					@echo -e "$(BLUE)Compiled $(NAME) successfully$(RESET)"
+					@echo "$(BLUE)Compiled $(NAME) successfully$(RESET)"
 
 $(OBJSDIR)/%.o: $(SRCSDIR)/%.c
 					@mkdir -p $(@D)
 					@$(COMPILER) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
-					@echo -e "$(GREEN)Compiled $(RESET)$(notdir $<)"
+					@echo "$(GREEN)Compiled $(RESET)$(notdir $<)"
 					@ar rc -s $(NAME) $@
-					@echo -e "$(GREEN)Added to $(RESET)$(NAME)"
+#					@echo "$(GREEN)Added to $(RESET)$(NAME)"
 
 clean:
 					@rm -Rf $(OBJSDIR)
 
 fclean: 			clean
-					@echo -e "$(RED)Removing $(RESET)$(NAME)"
+					@echo "$(RED)Removing $(RESET)$(NAME)"
 					@rm -f $(NAME)
 
 re:					fclean all

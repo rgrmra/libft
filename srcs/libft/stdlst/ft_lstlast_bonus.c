@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 19:00:04 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/01/08 14:39:01 by rde-mour         ###   ########.org.br   */
+/*   Created: 2023/10/12 18:20:13 by rde-mour          #+#    #+#             */
+/*   Updated: 2024/01/08 14:47:04 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ft_stdlst.h"
 
-# include "ft_ctype.h"
-# include "ft_printf_bonus.h"
-# include "ft_stdlib.h"
-# include "ft_stdlst.h"
-# include "ft_stdio.h"
-# include "ft_string.h"
-# include "get_next_line.h"
-
-#endif
+t_list	*ft_lstlast(t_list *list)
+{
+	if (!list)
+		return (0);
+	while (list -> next != 0)
+	{
+		list = list -> next;
+	}
+	return (list);
+}

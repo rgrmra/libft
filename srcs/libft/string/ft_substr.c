@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 19:00:04 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/01/08 14:39:01 by rde-mour         ###   ########.org.br   */
+/*   Created: 2023/10/09 20:47:43 by rde-mour          #+#    #+#             */
+/*   Updated: 2024/01/08 14:53:55 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ft_string.h"
 
-# include "ft_ctype.h"
-# include "ft_printf_bonus.h"
-# include "ft_stdlib.h"
-# include "ft_stdlst.h"
-# include "ft_stdio.h"
-# include "ft_string.h"
-# include "get_next_line.h"
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*sub;
+	size_t	slen;
 
-#endif
+	if (!s)
+		return (0);
+	slen = ft_strlen(s);
+	if (slen < start)
+		return (ft_strdup(""));
+	if ((slen - start) < len)
+		len = slen - start;
+	sub = (char *) ft_calloc(len + 1, sizeof(char));
+	if (!sub)
+		return (0);
+	ft_strlcpy(sub, s + start, len + 1);
+	return (sub);
+}

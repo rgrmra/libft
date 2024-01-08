@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_ctype.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 19:00:04 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/01/08 14:39:01 by rde-mour         ###   ########.org.br   */
+/*   Created: 2024/01/08 13:16:06 by rde-mour          #+#    #+#             */
+/*   Updated: 2024/01/08 15:15:18 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_CTYPE_H
+# define FT_CTYPE_H
 
-# include "ft_ctype.h"
-# include "ft_printf_bonus.h"
-# include "ft_stdlib.h"
-# include "ft_stdlst.h"
-# include "ft_stdio.h"
-# include "ft_string.h"
-# include "get_next_line.h"
+int	ft_isalnum(int c);
+int	ft_isalpha(int c);
+int	ft_isascii(int c);
+int	ft_isdigit(int c);
+int	ft_isprint(int c);
+int	ft_isspace(int c);
+int	ft_tolower(int c);
+int	ft_toupper(int c);
 
 #endif
