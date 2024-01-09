@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 19:37:59 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/12/09 18:38:36 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/01/09 12:04:13 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*gnl_free_memory(t_buffered **list)
 {
 	t_buffered	*tmp;
 
-	while (*list)
+	while (list && *list)
 	{
 		tmp = *list;
 		*list = (*list)-> next;

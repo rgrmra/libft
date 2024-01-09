@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 19:21:28 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/12/09 19:04:30 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/01/09 12:03:18 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ char	*get_next_line(int fd)
 	static char			buffer[BUFFER_SIZE];
 	static t_buffered	*list;
 
+	if (fd == -1)
+		return (gnl_free_memory(&list));
 	if (list && gnl_lstfind_character(list, '\n'))
 		return (gnl_build_string(&list));
 	i = 0;
