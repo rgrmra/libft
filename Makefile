@@ -6,7 +6,7 @@
 #    By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 10:01:10 by rde-mour          #+#    #+#              #
-#    Updated: 2024/01/08 14:26:30 by rde-mour         ###   ########.org.br    #
+#    Updated: 2024/01/13 11:24:10 by rde-mour         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ FILES				= libft/ctype/ft_isalnum.c \
 					  libft/string/ft_strncmp.c \
 					  libft/string/ft_strnstr.c \
 					  libft/string/ft_strrchr.c \
+					  libft/string/ft_strrplc.c \
 					  libft/string/ft_strtrim.c \
 					  libft/string/ft_strmapi.c \
 					  libft/string/ft_striteri.c \
