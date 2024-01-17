@@ -6,7 +6,7 @@
 #    By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 10:01:10 by rde-mour          #+#    #+#              #
-#    Updated: 2024/01/13 11:24:10 by rde-mour         ###   ########.org.br    #
+#    Updated: 2024/01/17 11:54:40 by rde-mour         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ FILES				= libft/ctype/ft_isalnum.c \
 					  libft/ctype/ft_tolower.c \
 					  libft/ctype/ft_toupper.c \
 					  libft/stdlib/ft_atoi.c \
+					  libft/stdlib/ft_atol.c \
 					  libft/stdlib/ft_calloc.c \
 					  libft/stdlib/ft_itoa.c \
 					  libft/string/ft_bzero.c \
