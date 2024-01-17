@@ -6,13 +6,13 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:19:41 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/01/17 11:53:27 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/01/17 12:00:08 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ctype.h"
 
-int	ft_atoi(const char *nptr)
+long	ft_atoi(const char *nptr)
 {
 	short	sign;
 	long	nb;
