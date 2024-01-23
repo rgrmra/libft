@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:58:54 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/11/19 14:34:13 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/01/23 11:26:54 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,6 @@ void	lstadd_back(t_node **list, t_node *node);
 void	lstadd_front(t_node **list, t_node *node);
 size_t	lstsize(t_node *list);
 int		ft_printf(const char *fmt, ...);
+int		ft_sprintf(char **str, const char *fmt, ...);
 
 #endif

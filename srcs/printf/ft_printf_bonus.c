@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 19:30:27 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/12/03 15:16:10 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/01/23 11:45:04 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,35 @@ static void	check_args(t_node **list, char *fmt, va_list args)
 		else
 			lstadd_back(list, lstnew(*fmt++));
 	}
+}
+
+int	ft_sprintf(char **str, const char *fmt, ...)
+{
+	size_t			i;
+	size_t			size;
+	va_list			args;
+	static t_node	*list;
+	t_node			*tmp;
+
+	if (!fmt)
+		return (-1);
+	va_start(args, fmt);
+	check_args(&list, (char *) fmt, args);
+	va_end(args);
+	size = lstsize(list);
+	*str = (char *) malloc(sizeof(char) * size + 1);
+	if (!str)
+		return (-1);
+	i = 0;
+	while (list)
+	{
+		tmp = list;
+		*(*(str) + i++) = list -> character;
+		list = list -> next;
+		free(tmp);
+	}
+	*(*(str) + i) = '\0';
+	return (size);
 }
 
 int	ft_printf(const char *fmt, ...)
