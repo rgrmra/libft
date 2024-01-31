@@ -1,8 +1,21 @@
+<p align="center">
+   <img src="https://game.42sp.org.br/static/assets/achievements/libftm.png"/><br>
+   <img src="https://img.shields.io/github/languages/code-size/rgrmra/libft?color=blue&style=for-the-badge" />
+   <img src="https://img.shields.io/github/languages/top/rgrmra/libft?color=blue&style=for-the-badge" />
+   <img src="https://img.shields.io/github/last-commit/rgrmra/libft?color=blue&style=for-the-badge" />
+</p>
+
 #  Libft
 
 It's the documentation of my personal libft made at 42 São Paulo to use in my projects.
 
 It's a collection of functions made by myself that behaves as the originals.
+
+> Obs: I have a new version of libft that contains the libft, get_next_line and ft_printf functions in the same project and I use it in my projects.
+> You could access it with the link bellow:
+
+- New libft version: [libftx](https://github.com/rgrmra/libftx)
+
 
 ## Menu
 
