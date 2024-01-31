@@ -513,7 +513,7 @@ void    ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 > Concatenates a new string containg the two strings informed.
 
-**[source code](./ft_strljoin.c)**
+**[source code](./ft_strjoin.c)**
     
 ```c
 char    *ft_strjoin(const char *s1, const char *s2);
