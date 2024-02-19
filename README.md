@@ -1,21 +1,24 @@
+<img align="center" src="https://royalbox.com.br/github/libft_banner.png"/><br>
 <p align="center">
-   <img src="https://game.42sp.org.br/static/assets/achievements/libftm.png"/><br>
    <img src="https://img.shields.io/github/languages/code-size/rgrmra/libft?color=blue&style=for-the-badge" />
    <img src="https://img.shields.io/github/languages/top/rgrmra/libft?color=blue&style=for-the-badge" />
    <img src="https://img.shields.io/github/last-commit/rgrmra/libft?color=blue&style=for-the-badge" />
 </p>
 
-#  Libft
+<p align="center">
+   This project is about coding a C library.<br>
+   It will contain a lot of general purpose functions your programs will rely upon.
+</p>
 
-It's the documentation of my personal libft made at 42 São Paulo to use in my projects.
+#  Project
 
-It's a collection of functions made by myself that behaves as the originals.
+This is the first project of the common core at 42 São Paulo. The project wants that you recode some functions from **C Library** and other useful functions that you could use in your future projects.
 
-> Obs: I have a new version of libft that contains the libft, get_next_line and ft_printf functions in the same project and I use it in my projects.
+> [!IMPORTANT]
+> I have a new version of libft that contains the **libft**, **get_next_line** and **ft_printf** functions in the same project.<br>
 > You could access it with the link bellow:
-
-- New libft version: [libftx](https://github.com/rgrmra/libftx)
-
+>
+> New libft version: [libftx](https://github.com/rgrmra/libftx)
 
 ## Menu
 
