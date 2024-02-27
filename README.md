@@ -3,6 +3,7 @@
    <img src="https://img.shields.io/github/languages/code-size/rgrmra/libft?color=blue&style=for-the-badge" />
    <img src="https://img.shields.io/github/languages/top/rgrmra/libft?color=blue&style=for-the-badge" />
    <img src="https://img.shields.io/github/last-commit/rgrmra/libft?color=blue&style=for-the-badge" />
+   <img src="https://img.shields.io/github/license/rgrmra/libft?color=blue&style=for-the-badge" />
 </p>
 
 <p align="center">
