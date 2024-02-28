@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 14:29:48 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/11/16 21:04:26 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/02/27 22:00:57 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ static void	ft_putnbr(t_node **list, unsigned int nbr)
 
 void	ft_build_unsigned(t_node **list, unsigned int nb, t_format *conf)
 {
-	conf -> flags &= ~PLUS;
-	conf -> flags &= ~HASH;
-	conf -> flags &= ~SPACE;
+	conf -> flags &= ~FLAG_PLUS;
+	conf -> flags &= ~FLAG_HASH;
+	conf -> flags &= ~FLAG_SPACE;
 	ft_build_config(&conf, 0);
 	conf -> characters = 0;
 	if (conf -> precision != 0 || nb != 0)

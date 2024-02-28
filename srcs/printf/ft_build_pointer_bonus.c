@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 14:54:21 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/12/02 10:56:29 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/02/27 22:00:27 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ void	ft_build_pointer(t_node **list, unsigned long long nb, t_format *conf)
 		ft_build_string(list, "(nil)", conf);
 		return ;
 	}
-	if (conf -> flags & LEFT && conf -> flags & ZERO)
-		conf -> flags &= ~ZERO;
-	conf -> flags &= ~HASH;
-	if (conf -> flags & ZERO && conf -> precision == -1)
+	if (conf -> flags & FLAG_LEFT && conf -> flags & FLAG_ZERO)
+		conf -> flags &= ~FLAG_ZERO;
+	conf -> flags &= ~FLAG_HASH;
+	if (conf -> flags & FLAG_ZERO && conf -> precision == -1)
 		conf -> precision = conf -> width - 2;
-	conf -> flags &= ~ZERO;
+	conf -> flags &= ~FLAG_ZERO;
 	conf -> characters = 0;
 	ft_putnbr(nb, HEX_LOWER, &(conf -> characters));
 	if (conf -> precision > (int) lstsize(conf -> characters))

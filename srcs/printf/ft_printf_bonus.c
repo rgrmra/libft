@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 19:30:27 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/01/23 11:45:04 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/02/27 22:01:29 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,15 +68,15 @@ static void	check_args(t_node **list, char *fmt, va_list args)
 			while (*fmt++ && *fmt && ft_find_characters("-+ 0#", *fmt))
 			{
 				if (*fmt == '-')
-					conf.flags |= LEFT;
+					conf.flags |= FLAG_LEFT;
 				if (*fmt == '+')
-					conf.flags |= PLUS;
+					conf.flags |= FLAG_PLUS;
 				if (*fmt == ' ')
-					conf.flags |= SPACE;
+					conf.flags |= FLAG_SPACE;
 				if (*fmt == '0')
-					conf.flags |= ZERO;
+					conf.flags |= FLAG_ZERO;
 				if (*fmt == '#')
-					conf.flags |= HASH;
+					conf.flags |= FLAG_HASH;
 			}
 			check_bonus(list, &fmt, args, &conf);
 		}

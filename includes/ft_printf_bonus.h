@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:58:54 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/01/23 11:26:54 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/02/27 21:58:18 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@
 # define HEX_LOWER	"0123456789abcdef"
 # define HEX_UPPER	"0123456789ABCDEF"
 
-# define ZERO	0b000001
-# define PLUS	0b000010
-# define SPACE	0b000100
-# define LEFT	0b001000
-# define HASH	0b010000
+# define FLAG_ZERO	0b000001
+# define FLAG_PLUS	0b000010
+# define FLAG_SPACE	0b000100
+# define FLAG_LEFT	0b001000
+# define FLAG_HASH	0b010000
 
 typedef struct s_node
 {

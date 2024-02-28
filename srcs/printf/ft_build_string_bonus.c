@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 13:37:58 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/11/18 15:17:09 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/02/27 22:00:45 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	build(t_node **list, t_node *characters, int len, t_format *conf)
 {
 	if (conf && len > conf -> precision && conf -> precision > -1)
 		len = conf -> precision;
-	if (conf && !(conf -> flags & LEFT))
+	if (conf && !(conf -> flags & FLAG_LEFT))
 		while (len < conf -> width--)
 			lstadd_back(list, lstnew(' '));
 	if (conf && characters && conf -> precision > -1)
