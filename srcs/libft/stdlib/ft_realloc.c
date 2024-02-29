@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdlib.h                                        :+:      :+:    :+:   */
+/*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 13:54:04 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/02/29 18:49:54 by rde-mour         ###   ########.org.br   */
+/*   Created: 2024/02/29 18:41:07 by rde-mour          #+#    #+#             */
+/*   Updated: 2024/02/29 18:52:27 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDLIB_H
-# define FT_STDLIB_H
+#include "ft_stdlib.h"
+#include "ft_string.h"
 
-# include <stdlib.h>
+void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
+{
+	void	*new;
 
-int		ft_atoi(const char *nptr);
-long	ft_atol(const char *nptr);
-void	*ft_calloc(size_t nmemb, size_t size);
-char	*itoa(int n);
-void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
-
-#endif
+	if (old_size > new_size)
+		old_size = new_size;
+	new = (void *) ft_calloc(1, new_size);
+	if (!ptr || !new)
+		return (new);
+	ft_memcpy(new, (unsigned char *) ptr, old_size);
+	return (new);
+}

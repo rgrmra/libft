@@ -6,7 +6,7 @@
 #    By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 10:01:10 by rde-mour          #+#    #+#              #
-#    Updated: 2024/01/17 11:54:40 by rde-mour         ###   ########.org.br    #
+#    Updated: 2024/02/29 18:27:26 by rde-mour         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ FILES				= libft/ctype/ft_isalnum.c \
 					  libft/stdlib/ft_atol.c \
 					  libft/stdlib/ft_calloc.c \
 					  libft/stdlib/ft_itoa.c \
+					  libft/stdlib/ft_realloc.c \
 					  libft/string/ft_bzero.c \
 					  libft/string/ft_memchr.c \
 					  libft/string/ft_memcmp.c \
