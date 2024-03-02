@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 19:36:00 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/03/01 23:13:14 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/03/02 01:06:59 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 # include "stdlib.h"
 
-# define ARRAYLIST_SIZE 16
+# define ARRAY_SIZE 16
 
-typedef struct s_alst	t_alst;
+typedef struct s_array	t_array;
 
-struct s_alst
+struct s_array
 {
 	size_t	size;
 	size_t	index;
@@ -30,10 +30,10 @@ struct s_alst
 	void	(*del)();
 };
 
-void	arradd(t_alst **array, void *node);
-void	arrclear(t_alst **array, void (*f)());
-void	**arrget(t_alst **array, void *node, int (*c)());
-void	arrdel(t_alst **array, void *node, int (*c)(), void (*f)());
-t_alst	*arrnew(void);
+void	arradd(t_array **array, void *node);
+void	arrclear(t_array **array, void (*f)());
+void	**arrget(t_array **array, void *node, int (*c)());
+void	arrdel(t_array **array, void *node, int (*c)(), void (*f)());
+t_array	*arrnew(void);
 
 #endif

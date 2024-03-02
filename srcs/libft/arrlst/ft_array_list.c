@@ -6,16 +6,16 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 19:43:53 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/03/01 23:11:40 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/03/02 01:08:03 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_arrlst.h"
 #include "ft_stdlib.h"
 
-void	arradd(t_alst **array, void *node)
+void	arradd(t_array **array, void *node)
 {
-	t_alst	*arr;
+	t_array	*arr;
 
 	if (!array || !(*array)->list || !node)
 		return ;
@@ -31,9 +31,9 @@ void	arradd(t_alst **array, void *node)
 	arr->index++;
 }
 
-void	arrdel(t_alst **array, void *node, int (*c)(), void (*f)())
+void	arrdel(t_array **array, void *node, int (*c)(), void (*f)())
 {
-	t_alst	*arr;
+	t_array	*arr;
 	size_t	i;
 
 	if (!array || !(*array)->list || !node)
@@ -54,9 +54,9 @@ void	arrdel(t_alst **array, void *node, int (*c)(), void (*f)())
 	}
 }
 
-void	arrclear(t_alst **array, void (*f)())
+void	arrclear(t_array **array, void (*f)())
 {
-	t_alst	*arr;
+	t_array	*arr;
 	size_t	i;
 
 	if (!array || !(*array)->list)
@@ -73,9 +73,9 @@ void	arrclear(t_alst **array, void (*f)())
 	free(arr);
 }
 
-void	**arrget(t_alst **array, void *node, int (*c)())
+void	**arrget(t_array **array, void *node, int (*c)())
 {
-	t_alst	*arr;
+	t_array	*arr;
 	size_t	i;
 
 	if (!array || !(*array)->list || !node | !c)
@@ -91,17 +91,17 @@ void	**arrget(t_alst **array, void *node, int (*c)())
 	return (NULL);
 }
 
-t_alst	*arrnew(void)
+t_array	*arrnew(void)
 {
-	t_alst	*arr;
+	t_array	*arr;
 
-	arr = (t_alst *) ft_calloc(1, sizeof(t_alst));
+	arr = (t_array *) ft_calloc(1, sizeof(t_array));
 	if (!arr)
 		return (arr);
-	arr->list = (void *) ft_calloc(ARRAYLIST_SIZE, sizeof(void *));
+	arr->list = (void *) ft_calloc(ARRAY_SIZE, sizeof(void *));
 	if (!arr->list)
 		return (arr);
-	arr->size = ARRAYLIST_SIZE;
+	arr->size = ARRAY_SIZE;
 	arr->index = 0;
 	arr->add = &arradd;
 	arr->clear = &arrclear;
