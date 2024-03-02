@@ -6,15 +6,14 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 19:43:53 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/03/01 19:30:22 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/03/01 23:11:40 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_arrlst.h"
 #include "ft_stdlib.h"
-#include "ft_printf_bonus.h"
 
-void	alst_add(t_alst **array, void *node)
+void	arradd(t_alst **array, void *node)
 {
 	t_alst	*arr;
 
@@ -32,7 +31,7 @@ void	alst_add(t_alst **array, void *node)
 	arr->index++;
 }
 
-void	alst_remove(t_alst **array, void *node, int (*c)(), void (*f)())
+void	arrdel(t_alst **array, void *node, int (*c)(), void (*f)())
 {
 	t_alst	*arr;
 	size_t	i;
@@ -55,7 +54,7 @@ void	alst_remove(t_alst **array, void *node, int (*c)(), void (*f)())
 	}
 }
 
-void	alst_clear(t_alst **array, void (*f)())
+void	arrclear(t_alst **array, void (*f)())
 {
 	t_alst	*arr;
 	size_t	i;
@@ -74,7 +73,7 @@ void	alst_clear(t_alst **array, void (*f)())
 	free(arr);
 }
 
-void	**alst_geta(t_alst **array, void *node, int (*c)())
+void	**arrget(t_alst **array, void *node, int (*c)())
 {
 	t_alst	*arr;
 	size_t	i;
@@ -92,7 +91,7 @@ void	**alst_geta(t_alst **array, void *node, int (*c)())
 	return (NULL);
 }
 
-t_alst	*new_alst(void)
+t_alst	*arrnew(void)
 {
 	t_alst	*arr;
 
@@ -104,9 +103,9 @@ t_alst	*new_alst(void)
 		return (arr);
 	arr->size = ARRAYLIST_SIZE;
 	arr->index = 0;
-	arr->add = &alst_add;
-	arr->clear = &alst_clear;
-	arr->get = &alst_geta;
-	arr->remove = &alst_remove;
+	arr->add = &arradd;
+	arr->clear = &arrclear;
+	arr->get = &arrget;
+	arr->remove = &arrdel;
 	return (arr);
 }

@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 19:36:00 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/03/01 19:33:38 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/03/01 23:13:14 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ struct s_alst
 	void	(*add)();
 	void	(*clear)();
 	void	**(*get)();
-	void	(*remove)();
+	void	(*del)();
 };
 
-void	alst_add(t_alst **array, void *node);
-void	alst_clear(t_alst **array, void (*f)());
-void	**alst_get(t_alst **array, void *node, int (*c)());
-void	alst_remove(t_alst **array, void *node, int (*c)(), void (*f)());
-t_alst	*new_alst(void);
+void	arradd(t_alst **array, void *node);
+void	arrclear(t_alst **array, void (*f)());
+void	**arrget(t_alst **array, void *node, int (*c)());
+void	arrdel(t_alst **array, void *node, int (*c)(), void (*f)());
+t_alst	*arrnew(void);
 
 #endif
