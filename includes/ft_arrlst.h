@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 19:36:00 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/03/02 01:06:59 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/03/02 13:08:02 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ struct s_array
 	void	(*del)();
 };
 
-void	arradd(t_array **array, void *node);
+void	arradd(t_array **array, void **node);
 void	arrclear(t_array **array, void (*f)());
 void	**arrget(t_array **array, void *node, int (*c)());
 void	arrdel(t_array **array, void *node, int (*c)(), void (*f)());

@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_array_list.c                                    :+:      :+:    :+:   */
+/*   ft_arraylist.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 19:43:53 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/03/02 01:08:03 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/03/02 16:12:11 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_arrlst.h"
 #include "ft_stdlib.h"
 
-void	arradd(t_array **array, void *node)
+void	arradd(t_array **array, void **node)
 {
 	t_array	*arr;
 
-	if (!array || !(*array)->list || !node)
+	if (!array || !(*array)->list || !node || !(*node))
 		return ;
 	arr = *array;
 	if (arr->index >= arr->size)
@@ -27,7 +27,7 @@ void	arradd(t_array **array, void *node)
 				sizeof(void *) * arr->size * 2);
 		arr->size *= 2;
 	}
-	arr->list[arr->index] = node;
+	arr->list[arr->index] = *node;
 	arr->index++;
 }
 
@@ -36,7 +36,7 @@ void	arrdel(t_array **array, void *node, int (*c)(), void (*f)())
 	t_array	*arr;
 	size_t	i;
 
-	if (!array || !(*array)->list || !node)
+	if (!array || !(*array)->list || !node || !c)
 		return ;
 	arr = *array;
 	i = 0;
@@ -44,11 +44,14 @@ void	arrdel(t_array **array, void *node, int (*c)(), void (*f)())
 	{
 		if (c(arr->list[i], node))
 		{
-			if (*f)
-				f(arr->list[i]);
-			arr->list[i] = arr->list[arr->index - 1];
-			arr->index--;
-			i--;
+			if (f)
+				f(&arr->list[i]);
+			if (arr->index > 1)
+			{
+				arr->list[i] = arr->list[arr->index - 1];
+				arr->index--;
+				i--;
+			}
 		}
 		i++;
 	}
@@ -57,17 +60,14 @@ void	arrdel(t_array **array, void *node, int (*c)(), void (*f)())
 void	arrclear(t_array **array, void (*f)())
 {
 	t_array	*arr;
-	size_t	i;
 
 	if (!array || !(*array)->list)
 		return ;
 	arr = *array;
-	i = 0;
-	while (i < arr->index)
+	while (arr->index--)
 	{
 		if (f)
-			f(arr->list[i]);
-		i++;
+			f(&arr->list[arr->index]);
 	}
 	free(arr->list);
 	free(arr);
@@ -106,6 +106,6 @@ t_array	*arrnew(void)
 	arr->add = &arradd;
 	arr->clear = &arrclear;
 	arr->get = &arrget;
-	arr->remove = &arrdel;
+	arr->del = &arrdel;
 	return (arr);
 }

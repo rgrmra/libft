@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*   ft_getenv.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/29 18:41:07 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/03/02 12:24:26 by rde-mour         ###   ########.org.br   */
+/*   Created: 2024/03/02 16:22:22 by rde-mour          #+#    #+#             */
+/*   Updated: 2024/03/02 18:00:55 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stdlib.h"
-#include "ft_string.h"
+#ifndef FT_GETENV_H
+# define FT_GETENV_H
 
-void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
+typedef struct s_envp	t_envp;
+
+struct s_envp
 {
-	void	*new;
+	char	*name;
+	char	**values;
+};
 
-	if (old_size > new_size)
-		old_size = new_size;
-	new = (void *) ft_calloc(1, new_size);
-	if (!ptr || !new)
-		return (new);
-	ft_memcpy(new, (unsigned char *) ptr, old_size);
-	free(ptr);
-	return (new);
-}
+enum e_status
+{
+	FAILURE,
+	SUCCESS
+};
+
+void	envadd(t_array **var, char *name, char *values);
+void	envclear(t_array **var);
+void	envdel(t_array **var, char *name);
+t_envp	**envget(t_array **var, char *name);
+void	envnew(char **env, t_array **var);
+void	envprint(t_array **var);
+
+#endif
