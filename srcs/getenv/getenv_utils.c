@@ -1,65 +1,72 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_getenv.c                                        :+:      :+:    :+:   */
+/*   getenv_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 19:40:39 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/03/02 18:00:00 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/03/11 09:13:13 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "ft_arrlst.h"
-#include "ft_getenv.h"
+#include <stdlib.h>
+#include "ft_string.h"
+#include "arraylist.h"
+#include "getenv.h"
 
-static int	compare(t_envp *src, char *str)
+static int	compare(void *src, void *str)
 {
-	if (!src || !src->name || !str || !(*str))
+	t_var	*p_src;
+	char	*p_str;
+
+	p_src = (t_var *) src;
+	p_str = (char *) str;
+	if (!p_src || !p_src->name || !p_str || !(*p_str))
 		return (FAILURE);
-	if (!ft_strncmp(src->name, str, ft_strlen(src->name) + 1))
+	if (!ft_strncmp(p_src->name, str, ft_strlen(p_src->name) + 1))
 		return (SUCCESS);
 	return (FAILURE);
 }
 
-static int	delete(t_envp **list)
+static void	delete(void	*list)
 {
+	t_var	*p_list;
 	size_t	i;
 
-	if (!list || !(*list))
-		return (FAILURE);
-	if ((*list)->name)
-		free((*list)->name);
+	if (!list)
+		return ;
+	p_list = (t_var *) list;
+	if (p_list->name)
+		free(p_list->name);
 	i = 0;
-	if ((*list)->values)
+	if (p_list->values)
 	{
-		while ((*list)->values[i])
-			free((*list)->values[i++]);
-		free((*list)->values);
+		while (p_list->values[i])
+			free(p_list->values[i++]);
+		free(p_list->values);
 	}
-	free(*list);
-	*list = NULL;
-	return (SUCCESS);
+	free(list);
+	list = NULL;
 }
 
 void	envdel(t_array **var, char *name)
 {
 	if (!var || !(*var) || !name)
 		return ;
-	(*var)->del(var, "PATH", &compare, &delete);
+	arrdel(var, name, &compare, &delete);
 }
 
 void	envclear(t_array **var)
 {
 	if (!var || !(*var))
 		return ;
-	(*var)->clear(var, &delete);
+	arrclear(var, &delete);
 }
 
-t_envp	**envget(t_array **var, char *name)
+t_var	*envget(t_array **var, char *name)
 {
 	if (!var || !(*var) || !name)
 		return (NULL);
-	return ((t_envp **)(*var)->get(var, name, &compare));
+	return ((t_var *) arrget(var, name, &compare));
 }

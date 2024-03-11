@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_getenv_utils.c                                  :+:      :+:    :+:   */
+/*   getenv.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 17:36:57 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/03/02 17:49:52 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/03/11 09:04:54 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "ft_arrlst.h"
-#include "ft_getenv.h"
+#include <stdlib.h>
+#include "ft_stdlib.h"
+#include "ft_string.h"
+#include "arraylist.h"
+#include "getenv.h"
+#include "ft_stdio.h"
 
-void	envnew(char **env, t_array **var)
+void	envnew(t_array **var, char **env)
 {
 	size_t	size;
 	char	*tmp;
-	t_envp	*content;
+	t_var	*content;
 
 	if (!env || !var)
 		return ;
@@ -26,19 +29,32 @@ void	envnew(char **env, t_array **var)
 	{
 		tmp = ft_strchr(*env, '=');
 		size = ++tmp - (*env) - 1;
-		content = (t_envp *) ft_calloc(1, sizeof(t_envp));
+		content = (t_var *) ft_calloc(1, sizeof(t_var));
 		if (!content)
 			return ;
 		content->name = ft_substr(*env, 0, size);
 		content->values = ft_split(tmp, ':');
-		(*var)->add(var, &content);
+		arradd(var, content);
 		env++;
 	}
 }
 
+void	envadd(t_array **var, char *name, char *values)
+{
+	t_var	*content;
+
+	content = (t_var *) ft_calloc(1, sizeof(t_var));
+	if (!content)
+		return ;
+	content->name = ft_strdup(name);
+	content->values = ft_split(values, ':');
+	envdel(var, name);
+	arradd(var, content);
+}
+
 void	envprint(t_array **var)
 {
-	t_envp	*content;
+	t_var	*content;
 	size_t	i;
 	size_t	j;
 
@@ -49,27 +65,17 @@ void	envprint(t_array **var)
 		if (!content)
 			break ;
 		if (content->name)
-			ft_printf("%s=", content->name);
+		{
+			ft_putstr_fd(content->name, STDOUT_FILENO);
+			ft_putstr_fd("=", STDOUT_FILENO);
+		}
 		j = 0;
 		while (content->values[j])
 		{
-			ft_printf("%s", content->values[j++]);
+			ft_putstr_fd(content->values[j++], STDOUT_FILENO);
 			if (content->values[j])
-				ft_printf(":");
+				ft_putstr_fd(":", STDOUT_FILENO);
 		}
-		ft_printf("\n");
+		ft_putstr_fd("\n", STDOUT_FILENO);
 	}
-}
-
-void	envadd(t_array **var, char *name, char *values)
-{
-	t_envp	*content;
-
-	content = (t_envp *) ft_calloc(1, sizeof(t_envp));
-	if (!content)
-		return ;
-	content->name = ft_strdup(name);
-	content->values = ft_split(values, ':');
-	envdel(var, name);
-	(*var)->add(var, &content);
 }

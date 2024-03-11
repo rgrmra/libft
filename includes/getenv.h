@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_getenv.h                                        :+:      :+:    :+:   */
+/*   getenv.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 16:22:22 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/03/02 18:00:55 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/03/11 09:07:15 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_GETENV_H
-# define FT_GETENV_H
+#ifndef GETENV_H
+# define GETENV_H
 
-typedef struct s_envp	t_envp;
+# include "stdlib.h"
+# include <stdlib.h>
+# include "arraylist.h"
+# include "ft_string.h"
 
-struct s_envp
+typedef struct s_var	t_var;
+
+struct s_var
 {
 	char	*name;
 	char	**values;
@@ -30,8 +35,8 @@ enum e_status
 void	envadd(t_array **var, char *name, char *values);
 void	envclear(t_array **var);
 void	envdel(t_array **var, char *name);
-t_envp	**envget(t_array **var, char *name);
-void	envnew(char **env, t_array **var);
+t_var	*envget(t_array **var, char *name);
+void	envnew(t_array **var, char **envp);
 void	envprint(t_array **var);
 
 #endif
