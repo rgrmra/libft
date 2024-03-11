@@ -6,7 +6,11 @@
 #    By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 10:01:10 by rde-mour          #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2024/03/11 08:40:22 by rde-mour         ###   ########.org.br    #
+=======
+#    Updated: 2024/03/02 17:59:11 by rde-mour         ###   ########.org.br    #
+>>>>>>> eb62c49068a14f833a490c48e5f7c81cbebd8e6e
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +70,7 @@ FILES				= libft/ctype/ft_isalnum.c \
 					  libft/stdlst/ft_lstclear_bonus.c \
 					  libft/stdlst/ft_lstiter_bonus.c \
 					  libft/stdlst/ft_lstmap_bonus.c \
+					  libft/arrlst/ft_arraylist.c \
 					  gnl/get_next_line.c \
 					  gnl/get_next_line_utils.c \
 					  printf/ft_printf_bonus.c \
@@ -79,7 +84,12 @@ FILES				= libft/ctype/ft_isalnum.c \
 					  printf/ft_find_characters_bonus.c \
 					  printf/ft_build_config_bonus.c \
 					  printf/ft_build_bonus.c \
+<<<<<<< HEAD
 					  arraylist/arraylist.c 
+=======
+					  utils/ft_getenv.c \
+					  utils/ft_getenv_utils.c
+>>>>>>> eb62c49068a14f833a490c48e5f7c81cbebd8e6e
 SRCSDIR				= ./srcs
 OBJSDIR				= ./objs
 
