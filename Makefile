@@ -6,7 +6,7 @@
 #    By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 10:01:10 by rde-mour          #+#    #+#              #
-#    Updated: 2024/03/01 19:36:10 by rde-mour         ###   ########.org.br    #
+#    Updated: 2024/03/11 08:40:22 by rde-mour         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,7 @@ FILES				= libft/ctype/ft_isalnum.c \
 					  printf/ft_find_characters_bonus.c \
 					  printf/ft_build_config_bonus.c \
 					  printf/ft_build_bonus.c \
-					  libft/arrlst/ft_array_list.c 
+					  arraylist/arraylist.c 
 SRCSDIR				= ./srcs
 OBJSDIR				= ./objs
 
