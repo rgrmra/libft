@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 19:43:53 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/03/11 09:01:46 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/03 12:34:58 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	arrdel(t_array **array, void *node, int (*cmp)(void *, void *),
 		void (*del)(void *))
 {
 	t_array	*arr;
-	size_t		i;
+	size_t	i;
 
 	if (!array || !(*array)->list || !node || !cmp)
 		return ;
@@ -84,7 +84,7 @@ void	arrclear(t_array **array, void (*del)(void *))
 void	*arrget(t_array **array, void *node, int (*cmp)(void *, void *))
 {
 	t_array	*arr;
-	size_t		i;
+	size_t	i;
 
 	if (!array || !(*array)->list || !node | !cmp)
 		return (NULL);

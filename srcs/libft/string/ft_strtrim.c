@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:56:49 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/09/03 11:39:52 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/03 12:34:05 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
-	size = ft_strlen(s1) - 1;
-	if (!size)
+	size = ft_strlen(s1);
+	if (!size--)
 		return (ft_strdup(""));
-	while (*(s1 + size) && ft_strchr(set, *(s1 + size)))
+	while (size && *(s1 + size) && ft_strchr(set, *(s1 + size)))
 		size--;
 	new = ft_substr(s1, 0, ++size);
 	return (new);
