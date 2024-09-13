@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 14:00:39 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/09/13 14:02:33 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/13 14:34:56 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ int	check(char *str, int (*f)(int))
 {
 	if (!str)
 		return (0);
-	if (*str)
+	while (*str)
 		if (!f(*str++))
 			return (0);
 	return (1);
