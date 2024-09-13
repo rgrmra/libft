@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ctype.h                                         :+:      :+:    :+:   */
+/*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 13:16:06 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/09/13 14:03:29 by rde-mour         ###   ########.org.br   */
+/*   Created: 2024/09/13 14:00:39 by rde-mour          #+#    #+#             */
+/*   Updated: 2024/09/13 14:02:33 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_CTYPE_H
-# define FT_CTYPE_H
-
-int	check(char *, int (*f)(int));
-int	ft_isalnum(int c);
-int	ft_isalpha(int c);
-int	ft_isascii(int c);
-int	ft_isdigit(int c);
-int	ft_isprint(int c);
-int	ft_isspace(int c);
-int	ft_tolower(int c);
-int	ft_toupper(int c);
-
-#endif
+int	check(char *str, int (*f)(int))
+{
+	if (!str)
+		return (0);
+	if (*str)
+		if (!f(*str++))
+			return (0);
+	return (1);
+}
