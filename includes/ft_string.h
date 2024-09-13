@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 14:02:35 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/01/13 11:25:07 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/13 14:26:18 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ char	*ft_strrchr(const char *s, int c);
 void	ft_strrplc(char *str, char old, char new);
 char	*ft_strtrim(const char *s1, const char *set);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
+void	ft_mtxclear(char **str);
 
 #endif
