@@ -6,14 +6,14 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:16:06 by rde-mour          #+#    #+#             */
-/*   Updated: 2024/09/13 14:03:29 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/25 22:12:14 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_CTYPE_H
 # define FT_CTYPE_H
 
-int	check(char *, int (*f)(int));
+int	check(char *str, int (*f)(int));
 int	ft_isalnum(int c);
 int	ft_isalpha(int c);
 int	ft_isascii(int c);
