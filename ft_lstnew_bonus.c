@@ -6,11 +6,12 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 16:44:09 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/22 16:31:18 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 11:49:29 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {
@@ -18,8 +19,8 @@ t_list	*ft_lstnew(void *content)
 
 	new = (t_list *) malloc(1 * sizeof(t_list));
 	if (!new)
-		return (0);
-	new -> content = content;
-	new -> next = 0;
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
 	return (new);
 }
