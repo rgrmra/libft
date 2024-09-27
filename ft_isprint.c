@@ -6,13 +6,13 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:40:14 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/05 16:43:21 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 12:35:41 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c >= ' ' && c <= '~')
-		return (1);
-	return (0);
+	if (c < ' ' || c > '~')
+		return (0);
+	return (1);
 }
