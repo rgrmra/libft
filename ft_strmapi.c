@@ -6,30 +6,33 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 09:37:20 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/29 20:37:24 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 12:17:49 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+#include <stdlib.h>
+
+size_t	ft_strlen(const char *s);
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	unsigned int	i;
-	char			*new;
-	size_t			size;
+	size_t	i;
+	char	*p;
+	size_t	size;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	size = ft_strlen(s);
-	new = (char *) ft_calloc(size + 1, sizeof(char));
-	if (!new)
-		return (0);
+	p = (char *) malloc(sizeof(char) * (size + 1));
+	if (!p)
+		return (NULL);
 	i = 0;
 	while (*(s + i))
 	{
-		*(new + i) = f(i, *(s + i));
+		*(p + i) = f(i, *(s + i));
 		i++;
 	}
-	*(new + i) = '\0';
-	return (new);
+	*(p + i) = '\0';
+	return (p);
 }
