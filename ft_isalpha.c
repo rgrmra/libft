@@ -6,13 +6,13 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 20:57:17 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/10 18:04:20 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 12:34:28 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	if ((c < 'a' || c > 'z') && (c < 'A' || c > 'Z'))
+		return (0);
+	return (1);
 }
