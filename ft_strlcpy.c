@@ -6,11 +6,14 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 14:01:39 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/29 19:59:44 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 12:15:49 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+
+size_t	ft_strlen(const char *s);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
