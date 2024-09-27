@@ -6,11 +6,11 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 10:07:04 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/12 10:12:09 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 11:59:13 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
 {
