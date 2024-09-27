@@ -6,13 +6,15 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 12:39:22 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/14 13:42:27 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 11:32:56 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+
+void	*ft_memset(void *s, int c, size_t n);
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 0, n);
+	ft_memset(s, '\0', n);
 }
