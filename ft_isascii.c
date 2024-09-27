@@ -6,13 +6,13 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 22:11:03 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/29 19:45:14 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 12:35:03 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	if (c < 0x00 || c > 0x7F)
+		return (0);
+	return (1);
 }
