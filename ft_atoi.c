@@ -6,31 +6,27 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:19:41 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/29 20:24:37 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 11:28:09 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+
+int	ft_isdigit(int c);
 
 int	ft_atoi(const char *nptr)
 {
 	short	sign;
 	long	nb;
 
-	while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
+	while (*nptr == ' ' || (*nptr >= '\t' && *nptr <= '\r'))
 		nptr++;
-	sign = 0;
+	sign = 1;
 	if (*nptr == '+' || *nptr == '-')
 		if (*nptr++ == '-')
-			sign++;
+			sign = -1;
 	nb = 0;
 	while (ft_isdigit(*nptr))
-	{
-		nb *= 10;
-		nb += *nptr - 48;
-		nptr++;
-	}
-	if (sign)
-		nb = -nb;
-	return ((int) nb);
+		nb = 10 * nb + *nptr++ - '0';
+	return ((int) sign * nb);
 }
