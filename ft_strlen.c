@@ -6,18 +6,18 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:47:21 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/11/02 17:29:58 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 12:16:13 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 size_t	ft_strlen(const char *s)
 {
-	const char	*str;
+	const char	*p;
 
-	str = s;
-	while (*str)
-		str++;
-	return (str - s);
+	p = s;
+	while (*p)
+		p++;
+	return (p - s);
 }
