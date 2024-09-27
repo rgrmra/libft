@@ -6,13 +6,13 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 19:56:33 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/05 19:59:55 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 12:31:29 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
+	if (c < 'A' || c > 'Z')
+		return (c);
+	return (c + 0x20);
 }
