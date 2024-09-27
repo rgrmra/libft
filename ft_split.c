@@ -6,11 +6,16 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 10:25:14 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/11/02 17:38:00 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 13:05:49 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+#include <stdlib.h>
+
+size_t	ft_strlen(const char *s);
+char	*ft_strchr(const char *s, int c);
+char	*ft_substr(const char *s, unsigned int start, size_t len);
 
 static size_t	count_words(const char *s, char c)
 {
@@ -32,7 +37,7 @@ static size_t	count_words(const char *s, char c)
 static char	*find_word(const char **s, char c)
 {
 	size_t	end;
-	char	*word;
+	char	*p;
 
 	while (**s == c && **s)
 		(*s)++;
@@ -40,36 +45,37 @@ static char	*find_word(const char **s, char c)
 		end = ft_strlen(*s);
 	else
 		end = ft_strchr(*s, c) - *s;
-	word = ft_substr(*s, 0, end);
+	p = ft_substr(*s, 0, end);
 	while (**s != c && **s)
 		(*s)++;
-	return (word);
+	return (p);
 }
 
 char	**ft_split(const char *s, char c)
 {
 	size_t	i;
 	size_t	words;
-	char	**new;
+	char	**p;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	words = count_words(s, c);
-	new = (char **) ft_calloc(words + 1, sizeof(char *));
-	if (!new)
-		return (0);
+	p = (char **) malloc(sizeof(char *) * (words + 1));
+	if (!p)
+		return (NULL);
 	i = 0;
 	while (words--)
 	{
-		*(new + i) = find_word(&s, c);
-		if (!(*(new + i++)))
+		*(p + i) = find_word(&s, c);
+		if (!(*(p + i++)))
 		{
 			i = 0;
-			while (*(new + i))
-				free(*(new + i++));
-			free(new);
-			return (0);
+			while (*(p + i))
+				free(*(p + i++));
+			free(p);
+			return (NULL);
 		}
 	}
-	return (new);
+	*(p + i) = NULL;
+	return (p);
 }
