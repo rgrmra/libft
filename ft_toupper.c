@@ -6,13 +6,13 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 19:44:28 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/05 19:50:04 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 12:32:23 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+	if (c < 'a' || c > 'z')
+		return (c);
+	return (c - 32);
 }
