@@ -6,9 +6,16 @@
 #    By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 10:01:10 by rde-mour          #+#    #+#              #
-#    Updated: 2023/11/04 11:15:48 by rde-mour         ###   ########.org.br    #
+#    Updated: 2024/09/27 13:12:17 by rde-mour         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
+#
+RED					= $(shell tput setaf 1)
+GREEN				= $(shell tput setaf 2)
+YELLOW				= $(shell tput setaf 3)
+BLUE				= $(shell tput setaf 4)
+MAGENTA				= $(shell tput setaf 5)
+RESET				= $(shell tput sgr0)
 
 NAME				= libft.a
 
@@ -72,22 +79,22 @@ endif
 all: 				$(NAME)
 
 $(NAME): 			$(OBJS)
-					@echo "Creating archive: $@"
+					@echo "$(GREEN)Compiling$(RESET) $@"
 					@ar rc -s $(NAME) $(OBJS)
 
 %.o: %.c
-					@echo "Compiling: $<"
+					@echo "$(GREEN)Compiling$(RESET) $<"
 					@$(COMPILER) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
 bonus:
 					@make WITH_BONUS=TRUE --no-print-directory
 
 clean:
-					@echo "Deleting all objects"
+					@echo "$(RED)Removing$(RESET) $(NAME) objects"
 					@rm -f $(OBJS) $(OBJSBONUS)
 
 fclean: 			clean
-					@echo "Deleting $(NAME)"
+					@echo "$(RED)Removing$(RESET) $(NAME)"
 					@rm -f $(NAME)
 
 re:					fclean all
