@@ -6,18 +6,21 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 13:48:45 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/16 21:47:14 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 13:06:16 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+
+size_t	ft_strlen(const char *s);
+void	*ft_memchr(const void *s, int c, size_t n);
 
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	size;
-	char	*src;
+	char	*p;
 
 	size = ft_strlen(s);
-	src = ft_memchr(s, c, size + 1);
-	return (src);
+	p = (char *) ft_memchr(s, c, size + 1);
+	return (p);
 }
