@@ -6,7 +6,7 @@
 /*   By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 19:30:08 by rde-mour          #+#    #+#             */
-/*   Updated: 2023/10/29 19:21:50 by rde-mour         ###   ########.org.br   */
+/*   Updated: 2024/09/27 11:45:05 by rde-mour         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstiter(t_list *list, void (*f)(void *))
 		return ;
 	while (list)
 	{
-		f(list -> content);
-		list = list -> next;
+		f(list->content);
+		list = list->next;
 	}
 }
