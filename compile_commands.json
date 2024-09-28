@@ -1,0 +1,1107 @@
+[
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_substr.o",
+            "src/libft/string/ft_substr.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_substr.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/printf/ft_build_string_bonus.o",
+            "src/printf/ft_build_string_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/printf/ft_build_string_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/printf/ft_printf_utils_bonus.o",
+            "src/printf/ft_printf_utils_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/printf/ft_printf_utils_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_split.o",
+            "src/libft/string/ft_split.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_split.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/ctype/check.o",
+            "src/libft/ctype/check.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/ctype/check.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/gnl/get_next_line.o",
+            "src/gnl/get_next_line.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/gnl/get_next_line.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdio/ft_putchar_fd.o",
+            "src/libft/stdio/ft_putchar_fd.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdio/ft_putchar_fd.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/printf/ft_build_number_bonus.o",
+            "src/printf/ft_build_number_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/printf/ft_build_number_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdlib/ft_atol.o",
+            "src/libft/stdlib/ft_atol.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdlib/ft_atol.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_memchr.o",
+            "src/libft/string/ft_memchr.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_memchr.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdlst/ft_lstiter_bonus.o",
+            "src/libft/stdlst/ft_lstiter_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdlst/ft_lstiter_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/ctype/ft_isalnum.o",
+            "src/libft/ctype/ft_isalnum.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/ctype/ft_isalnum.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdlib/ft_itoa.o",
+            "src/libft/stdlib/ft_itoa.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdlib/ft_itoa.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_split_clear.o",
+            "src/libft/string/ft_split_clear.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_split_clear.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/printf/ft_build_pointer_bonus.o",
+            "src/printf/ft_build_pointer_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/printf/ft_build_pointer_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/ctype/ft_isascii.o",
+            "src/libft/ctype/ft_isascii.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/ctype/ft_isascii.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdlst/ft_lstclear_bonus.o",
+            "src/libft/stdlst/ft_lstclear_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdlst/ft_lstclear_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/ctype/ft_isdigit.o",
+            "src/libft/ctype/ft_isdigit.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/ctype/ft_isdigit.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdlst/ft_lstdelone_bonus.o",
+            "src/libft/stdlst/ft_lstdelone_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdlst/ft_lstdelone_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/gnl/get_next_line_utils.o",
+            "src/gnl/get_next_line_utils.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/gnl/get_next_line_utils.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/printf/ft_build_bonus.o",
+            "src/printf/ft_build_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/printf/ft_build_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_memcmp.o",
+            "src/libft/string/ft_memcmp.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_memcmp.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_strlen.o",
+            "src/libft/string/ft_strlen.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_strlen.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/ctype/ft_toupper.o",
+            "src/libft/ctype/ft_toupper.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/ctype/ft_toupper.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/printf/ft_build_unsigned_bonus.o",
+            "src/printf/ft_build_unsigned_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/printf/ft_build_unsigned_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdlst/ft_lstadd_back_bonus.o",
+            "src/libft/stdlst/ft_lstadd_back_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdlst/ft_lstadd_back_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_memmove.o",
+            "src/libft/string/ft_memmove.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_memmove.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/printf/ft_find_characters_bonus.o",
+            "src/printf/ft_find_characters_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/printf/ft_find_characters_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/ctype/ft_isspace.o",
+            "src/libft/ctype/ft_isspace.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/ctype/ft_isspace.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_memset.o",
+            "src/libft/string/ft_memset.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_memset.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_strlcpy.o",
+            "src/libft/string/ft_strlcpy.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_strlcpy.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdio/ft_putstr_fd.o",
+            "src/libft/stdio/ft_putstr_fd.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdio/ft_putstr_fd.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_bzero.o",
+            "src/libft/string/ft_bzero.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_bzero.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_memcpy.o",
+            "src/libft/string/ft_memcpy.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_memcpy.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/printf/ft_build_character_bonus.o",
+            "src/printf/ft_build_character_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/printf/ft_build_character_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/ctype/ft_isalpha.o",
+            "src/libft/ctype/ft_isalpha.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/ctype/ft_isalpha.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdlib/ft_realloc.o",
+            "src/libft/stdlib/ft_realloc.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdlib/ft_realloc.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_strncmp.o",
+            "src/libft/string/ft_strncmp.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_strncmp.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/ctype/ft_tolower.o",
+            "src/libft/ctype/ft_tolower.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/ctype/ft_tolower.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdio/ft_putnbr_fd.o",
+            "src/libft/stdio/ft_putnbr_fd.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdio/ft_putnbr_fd.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/arraylist/arraylist.o",
+            "src/arraylist/arraylist.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/arraylist/arraylist.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/getenv/getenv_utils.o",
+            "src/getenv/getenv_utils.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/getenv/getenv_utils.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/printf/ft_printf_bonus.o",
+            "src/printf/ft_printf_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/printf/ft_printf_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdlst/ft_lstsize_bonus.o",
+            "src/libft/stdlst/ft_lstsize_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdlst/ft_lstsize_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_strchr.o",
+            "src/libft/string/ft_strchr.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_strchr.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdlst/ft_lstmap_bonus.o",
+            "src/libft/stdlst/ft_lstmap_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdlst/ft_lstmap_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_strmapi.o",
+            "src/libft/string/ft_strmapi.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_strmapi.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdlst/ft_lstnew_bonus.o",
+            "src/libft/stdlst/ft_lstnew_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdlst/ft_lstnew_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdlib/ft_calloc.o",
+            "src/libft/stdlib/ft_calloc.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdlib/ft_calloc.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_strdup.o",
+            "src/libft/string/ft_strdup.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_strdup.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/printf/ft_build_config_bonus.o",
+            "src/printf/ft_build_config_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/printf/ft_build_config_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_strjoin.o",
+            "src/libft/string/ft_strjoin.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_strjoin.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_strrchr.o",
+            "src/libft/string/ft_strrchr.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_strrchr.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdlst/ft_lstadd_front_bonus.o",
+            "src/libft/stdlst/ft_lstadd_front_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdlst/ft_lstadd_front_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_strrplc.o",
+            "src/libft/string/ft_strrplc.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_strrplc.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdlst/ft_lstlast_bonus.o",
+            "src/libft/stdlst/ft_lstlast_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdlst/ft_lstlast_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_strnstr.o",
+            "src/libft/string/ft_strnstr.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_strnstr.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_striteri.o",
+            "src/libft/string/ft_striteri.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_striteri.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/getenv/getenv.o",
+            "src/getenv/getenv.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/getenv/getenv.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_strtrim.o",
+            "src/libft/string/ft_strtrim.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_strtrim.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdio/ft_putendl_fd.o",
+            "src/libft/stdio/ft_putendl_fd.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdio/ft_putendl_fd.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/string/ft_strlcat.o",
+            "src/libft/string/ft_strlcat.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/string/ft_strlcat.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/printf/ft_build_hexadecimal_bonus.o",
+            "src/printf/ft_build_hexadecimal_bonus.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/printf/ft_build_hexadecimal_bonus.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/stdlib/ft_atoi.o",
+            "src/libft/stdlib/ft_atoi.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/stdlib/ft_atoi.c"
+    },
+    {
+        "arguments": [
+            "cc",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-g3",
+            "-I",
+            "./include",
+            "-o",
+            "build/libft/ctype/ft_isprint.o",
+            "src/libft/ctype/ft_isprint.c"
+        ],
+        "directory": "/home/rgrmra/libft",
+        "file": "src/libft/ctype/ft_isprint.c"
+    }
+]

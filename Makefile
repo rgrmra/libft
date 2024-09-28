@@ -6,10 +6,10 @@
 #    By: rde-mour <rde-mour@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 10:01:10 by rde-mour          #+#    #+#              #
-#    Updated: 2024/09/27 13:12:17 by rde-mour         ###   ########.org.br    #
+#    Updated: 2024/09/28 10:47:02 by rde-mour         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
-#
+
 RED					= $(shell tput setaf 1)
 GREEN				= $(shell tput setaf 2)
 YELLOW				= $(shell tput setaf 3)
@@ -19,79 +19,96 @@ RESET				= $(shell tput sgr0)
 
 NAME				= libft.a
 
-SRCS				= ft_isalpha.c \
-					  ft_isdigit.c \
-					  ft_isalnum.c \
-					  ft_isascii.c \
-					  ft_isprint.c \
-					  ft_strlen.c \
-					  ft_memset.c \
-					  ft_bzero.c \
-					  ft_toupper.c \
-					  ft_tolower.c \
-					  ft_strchr.c \
-					  ft_strrchr.c \
-					  ft_strncmp.c \
-					  ft_memchr.c \
-					  ft_memcpy.c \
-					  ft_memcmp.c \
-					  ft_strlcpy.c \
-					  ft_strlcat.c \
-					  ft_atoi.c \
-					  ft_calloc.c \
-					  ft_strdup.c \
-					  ft_memmove.c \
-					  ft_strnstr.c \
-					  ft_substr.c \
-					  ft_strjoin.c \
-					  ft_strtrim.c \
-					  ft_itoa.c \
-					  ft_strmapi.c \
-					  ft_striteri.c \
-					  ft_putchar_fd.c \
-					  ft_putstr_fd.c \
-					  ft_putendl_fd.c \
-					  ft_putnbr_fd.c \
-					  ft_split.c
+FILES				= libft/ctype/ft_isalnum.c \
+					  libft/ctype/ft_isalpha.c \
+					  libft/ctype/ft_isascii.c \
+					  libft/ctype/ft_isdigit.c \
+					  libft/ctype/ft_isprint.c \
+					  libft/ctype/ft_isspace.c \
+					  libft/ctype/ft_tolower.c \
+					  libft/ctype/ft_toupper.c \
+					  libft/ctype/check.c \
+					  libft/stdlib/ft_atoi.c \
+					  libft/stdlib/ft_atol.c \
+					  libft/stdlib/ft_calloc.c \
+					  libft/stdlib/ft_itoa.c \
+					  libft/stdlib/ft_realloc.c \
+					  libft/string/ft_bzero.c \
+					  libft/string/ft_memchr.c \
+					  libft/string/ft_memcmp.c \
+					  libft/string/ft_memcpy.c \
+					  libft/string/ft_memmove.c \
+					  libft/string/ft_memset.c \
+					  libft/string/ft_split.c \
+					  libft/string/ft_strchr.c \
+					  libft/string/ft_strdup.c \
+					  libft/string/ft_strjoin.c \
+					  libft/string/ft_strlcat.c \
+					  libft/string/ft_strlcpy.c \
+					  libft/string/ft_strlen.c \
+					  libft/string/ft_strncmp.c \
+					  libft/string/ft_strnstr.c \
+					  libft/string/ft_strrchr.c \
+					  libft/string/ft_strrplc.c \
+					  libft/string/ft_strtrim.c \
+					  libft/string/ft_strmapi.c \
+					  libft/string/ft_striteri.c \
+					  libft/string/ft_substr.c \
+					  libft/string/ft_split_clear.c \
+					  libft/stdio/ft_putchar_fd.c \
+					  libft/stdio/ft_putstr_fd.c \
+					  libft/stdio/ft_putendl_fd.c \
+					  libft/stdio/ft_putnbr_fd.c \
+					  libft/stdlst/ft_lstnew_bonus.c \
+					  libft/stdlst/ft_lstadd_front_bonus.c \
+					  libft/stdlst/ft_lstsize_bonus.c \
+					  libft/stdlst/ft_lstlast_bonus.c \
+					  libft/stdlst/ft_lstadd_back_bonus.c \
+					  libft/stdlst/ft_lstdelone_bonus.c \
+					  libft/stdlst/ft_lstclear_bonus.c \
+					  libft/stdlst/ft_lstiter_bonus.c \
+					  libft/stdlst/ft_lstmap_bonus.c \
+					  gnl/get_next_line.c \
+					  gnl/get_next_line_utils.c \
+					  printf/ft_printf_bonus.c \
+					  printf/ft_printf_utils_bonus.c \
+					  printf/ft_build_string_bonus.c \
+					  printf/ft_build_number_bonus.c \
+					  printf/ft_build_unsigned_bonus.c \
+					  printf/ft_build_hexadecimal_bonus.c \
+					  printf/ft_build_pointer_bonus.c \
+					  printf/ft_build_character_bonus.c \
+					  printf/ft_find_characters_bonus.c \
+					  printf/ft_build_config_bonus.c \
+					  printf/ft_build_bonus.c \
+					  arraylist/arraylist.c \
+					  getenv/getenv.c \
+					  getenv/getenv_utils.c
 
-BONUS				= ft_lstnew_bonus.c \
-					  ft_lstadd_front_bonus.c \
-					  ft_lstsize_bonus.c \
-					  ft_lstlast_bonus.c \
-					  ft_lstadd_back_bonus.c \
-					  ft_lstdelone_bonus.c \
-					  ft_lstclear_bonus.c \
-					  ft_lstiter_bonus.c \
-					  ft_lstmap_bonus.c
+SRCSDIR				= ./src
+OBJSDIR				= ./build
 
-INCLUDES			= ./ 
+INCLUDES			= -I ./include
 
-OBJS				= $(SRCS:%.c=%.o)
-OBJSBONUS			= $(BONUS:%.c=%.o)
+SRCS				= $(FILES:%.c=$(SRCSDIR)/%.c)
+OBJS				= $(FILES:%.c=$(OBJSDIR)/%.o)
 
 COMPILER 			= cc
-CFLAGS 				= -Wall -Wextra -Werror
-
-ifdef 				WITH_BONUS
-					OBJS += $(OBJSBONUS)
-endif
+CFLAGS 				= -Wall -Wextra -Werror -g3
 
 all: 				$(NAME)
 
 $(NAME): 			$(OBJS)
-					@echo "$(GREEN)Compiling$(RESET) $@"
-					@ar rc -s $(NAME) $(OBJS)
+					@echo "$(BLUE)Compiled $(NAME) successfully$(RESET)"
 
-%.o: %.c
-					@echo "$(GREEN)Compiling$(RESET) $<"
-					@$(COMPILER) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
-
-bonus:
-					@make WITH_BONUS=TRUE --no-print-directory
+$(OBJSDIR)/%.o: 	$(SRCSDIR)/%.c
+					@mkdir -p $(@D)
+					@$(COMPILER) $(CFLAGS) -c $< -o $@ $(INCLUDES)
+					@echo "$(GREEN)Compiled$(RESET) $(notdir $<)"
+					@ar rc -s $(NAME) $@
 
 clean:
-					@echo "$(RED)Removing$(RESET) $(NAME) objects"
-					@rm -f $(OBJS) $(OBJSBONUS)
+					@rm -Rf $(OBJSDIR)
 
 fclean: 			clean
 					@echo "$(RED)Removing$(RESET) $(NAME)"
@@ -99,4 +116,4 @@ fclean: 			clean
 
 re:					fclean all
 
-.PHONY:			 	all bonus clean fclean re
+.PHONY:			 	all clean fclean re
